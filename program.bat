@@ -441,8 +441,12 @@ goto main_menu
 :98
 cls
 echo ========================================================================================================================
-echo Running Submenu...
-powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
+echo Running winutil Submenu...
+$scriptUrl = "https://raw.githubusercontent.com/emreuls7/public/main/winutil.ps1"
+$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP | Select-Object -ExpandProperty Content
+Invoke-Expression $scriptContent
+
+::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
 ::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
 pause
 goto main_menu
@@ -451,7 +455,7 @@ goto main_menu
 :99
 cls
 echo ========================================================================================================================
-echo Running Submenu...
+echo Running MAS Submenu...
 ::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
 powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 ::powershell -ExecutionPolicy Bypass  -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
