@@ -4463,7 +4463,7 @@ echo I [.15.] Turning off Windows Defender Firewall                             
 echo I [.16.] Turning on Windows Defender Firewall                                                                          I
 echo I [.17.] Enable Network Discovery                                                                                      I
 echo I [.18.] Enabling "Launching applications and unsafe files" in Internet Options                                        I
-echo I [.19.]                                                                                                               I
+echo I [.19.] Removing Microsoft Edge                                                                                                              I
 echo I [.20.]                                                                                                               I
 echo I [.21.] Remove 'Open File - Security Warning' Prompt on Windows using                                                 I
 echo I [.22.] Restore 'Open File - Security Warning' Prompt on Windows using                                                I
@@ -4794,12 +4794,11 @@ goto menu21
 :install_programV15
 cls
 echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
 echo Turning off Windows Defender Firewall...
 netsh advfirewall set allprofiles state off
 echo Windows Defender Firewall has been turned off.
-echo completed.
+
 pause
 goto menu21
 
@@ -4865,8 +4864,21 @@ goto menu21
 :install_programV19
 cls
 echo ========================================================================================================================
+echo Removing Microsoft Edge...
 
+rem List the packages where Microsoft Edge is installed
+powershell "Get-AppxPackage *Microsoft.MicrosoftEdge* | Remove-AppxPackage"
 
+rem Clean up Microsoft Edge installation packages
+cd %ProgramFiles(x86)%\Microsoft\Edge\Application
+rd /s /q %ProgramFiles(x86)%\Microsoft\Edge\Application
+
+rem Remove remaining files after uninstalling Microsoft Edge
+cd %LocalAppData%\Microsoft\Edge
+rd /s /q %LocalAppData%\Microsoft\Edge
+
+echo Microsoft Edge has been removed.
+pause
 goto menu21
 
 
