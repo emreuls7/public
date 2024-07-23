@@ -332,8 +332,8 @@ net user administrator 412199
 echo completed.
 echo ------------------------
 echo Enabling Remote Desktop for Administrator...
-powershell -Command "Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 0"
-powershell -Command "Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'"
+powershell -ExecutionPolicy Bypass -Command "Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 0"
+powershell -ExecutionPolicy Bypass -Command "Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'"
 echo Remote Desktop has been enabled for Administrator.
 echo ------------------------
 
@@ -423,7 +423,7 @@ echo completed.
 echo ------------------------
 timeout 7
 echo Running Submenu...
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 echo completed.
 echo ------------------------
 echo ========================================================================================================================
@@ -442,8 +442,8 @@ goto main_menu
 cls
 echo ========================================================================================================================
 echo Running Submenu...
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
+powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
+::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
 pause
 goto main_menu
 
@@ -452,12 +452,10 @@ goto main_menu
 cls
 echo ========================================================================================================================
 echo Running Submenu...
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::powershell -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm https://get.activated.win | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.activated.win'))"
-::powershell -command "irm https://get.activated.win | iex"
+::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
+powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+::powershell -ExecutionPolicy Bypass  -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+::powershell -ExecutionPolicy Bypass  -command "irm https://get.activated.win | iex"
 pause
 goto main_menu
 
@@ -809,7 +807,7 @@ if /i "%answer%"=="Y" goto Y
 if /i "%answer%"=="N" goto N
 
 :Y
-powershell -command "irm https://massgrave.dev/ias | iex"
+powershell -ExecutionPolicy Bypass  -command "irm https://massgrave.dev/ias | iex"
 echo completed.
 echo ----------------------
 pause
