@@ -418,13 +418,8 @@ echo completed.
 echo ------------------------
 timeout 5
 echo Running MAS Submenu...
-[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
 
-$scriptUrl = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd"
-$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP | Select-Object -ExpandProperty Content
-Invoke-Expression $scriptContent
-
-::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 echo completed.
 echo ------------------------
 echo ========================================================================================================================
@@ -457,15 +452,9 @@ goto main_menu
 cls
 echo ========================================================================================================================
 echo Running MAS Submenu...
-[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
-
-$scriptUrl = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd"
-$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP | Select-Object -ExpandProperty Content
-Invoke-Expression $scriptContent
-
 
 ::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
-::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 ::powershell -ExecutionPolicy Bypass  -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 ::powershell -ExecutionPolicy Bypass  -command "irm https://get.activated.win | iex"
 pause
