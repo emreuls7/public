@@ -407,23 +407,24 @@ echo ------------------------
 echo Installing...
 winget install uvncbvba.UltraVnc -e
 echo completed.
-timeout 7
-echo UltraVNC Servis Run...
-start /wait "" "C:\Program Files\uvnc bvba\UltraVNC\winvnc.exe"
-echo completed.
 echo ------------------------
 echo Installing...
 winget install DeepL.DeepL -e
 echo completed.
 echo ------------------------
-timeout 7
 echo Installing...
 start /wait "" "\\192.168.18.2\setup\source\office\office2021ProPlus_tr\Setup64.exe"
 echo completed.
 echo ------------------------
-timeout 7
-echo Running Submenu...
-powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+timeout 5
+echo Running MAS Submenu...
+[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
+
+$scriptUrl = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/master/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd"
+$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP | Select-Object -ExpandProperty Content
+Invoke-Expression $scriptContent
+
+::powershell -ExecutionPolicy Bypass  -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 echo completed.
 echo ------------------------
 echo ========================================================================================================================
