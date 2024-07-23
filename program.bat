@@ -214,6 +214,7 @@ cls
 echo ========================================================================================================================
 echo Install List
 echo -------------
+echo Chocolat Install
 echo Enable Network Discovery
 echo Disable User Account Control
 echo Disable Accounts: Limit local account use of blank passwords to console logon only
@@ -225,7 +226,7 @@ echo Enabling Remote Desktop for Administrator
 echo -------
 echo *** Microsoft Store Upgrade... ***
 echo Microsoft DesktopAppInstaller Upgrade
-echo Chocolat Install
+echo -------
 echo Enable SMB 1.0/CIFS File Sharing Support on Windows
 echo dotnet3.5+4.5.1+.4.5.2
 echo Microsoft.VCRedist.2005+2015+
@@ -251,6 +252,8 @@ if /i "%answer%"=="N" goto N
 echo Installation process starting...
 REM Add your installation commands here
 
+echo Chocolat Install...
+powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 
 echo ------------------------
@@ -278,11 +281,7 @@ echo Disabling 'Accounts: Limit local account use of blank passwords to console 
 powershell -Command "Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LimitBlankPasswordUse' -Value 0"
 echo Accounts: Limit local account use of blank passwords to console logon only setting has been disabled.
 echo ------------------------
-echo Microsoft Store Upgrade...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install -e --id 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --silent"
-::start /wait "" "ms-windows-store://pdp?activetab=pivot%3Aoverviewtab&hl=en-us&gl=us&productid=9wzdncrfjbmp&referrer=storeforweb&mode=mini&pos=0%2C0%2C0%2C0"
-echo completed.
+
 echo ------------------------
 echo Turning off Windows Defender Firewall...
 netsh advfirewall set allprofiles state off
@@ -291,11 +290,39 @@ echo ------------------------
 echo Network Folder FIX...
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f
 echo Network Folder FIX.
+
 echo ------------------------
-echo ------------------------
-echo Ultimate Performance...
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 
-echo completed.
+
+echo Checking if Ultimate Performance power plan already exists...
+powercfg /list | findstr /i "e9a42b02-d5df-448d-aa00-03f14749eb61" >nul
+
+if %errorlevel%==0 (
+    echo Ultimate Performance power plan already exists. Activating it...
+    powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+) else (
+    echo Ultimate Performance power plan does not exist. Creating it...
+    powercfg /create "Ultimate Performance" e9a42b02-d5df-448d-aa00-03f14749eb61"
+    powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+)
+
+
+echo Disabling Fast Startup...
+:: Turn off Fast Startup
+powercfg /h off
+
+
+echo Power management settings are being set to "Never"...
+powercfg /change monitor-timeout-ac 0
+powercfg /change monitor-timeout-dc 0
+powercfg /change standby-timeout-ac 0
+powercfg /change standby-timeout-dc 0
+powercfg /change disk-timeout-ac 0
+powercfg /change disk-timeout-dc 0
+powercfg /change hibernate-timeout-ac 0
+powercfg /change hibernate-timeout-dc 0
+
+echo Ultimate Performance power plan activated and all power settings set to "Never".
+
 echo ------------------------
 echo Enable administrator account
 net user administrator /active:yes
@@ -309,17 +336,12 @@ powershell -Command "Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Cont
 powershell -Command "Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'"
 echo Remote Desktop has been enabled for Administrator.
 echo ------------------------
-echo Installing...
-echo *** Microsoft Store Upgrade... ***
-echo Microsoft DesktopAppInstaller Upgrade
+
+
+echo *** Microsoft Store Upgrade ***
+
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --id Microsoft.DesktopAppInstaller --accept-package-agreements --accept-source-agreements --silent"
-::powershell Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
-echo completed.
-echo ------------------------
-echo Installing...
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-echo completed.
+
 echo ------------------------
 echo Enable SMB 1.0/CIFS File Sharing Support on Windows
 dism.exe /online /enable-feature /featurename:"SMB1Protocol"
