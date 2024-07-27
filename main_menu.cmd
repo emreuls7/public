@@ -6,20 +6,20 @@ cls
 echo ------------------------------------------------------------------------------------------------------------------------
 echo --- main Menu                  --- Welcome to Software nstaller ---                               CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
-echo  [1]  *** Program nstaller ***                       [6]  Browser nstaller                                          
-echo  [2]  Program nstaller                               [7]  VPN + Remote nstaller                                     
-echo  [3]  Securty nstaller                              [8]  Meda Player nstaller                                     
-echo  [4]  Developer Tools nstaller                       [9]  Chat Messenger nstaller                                   
-echo  [5]  Drver nstaller                                [10] Games Launcher nstaller                                   
+echo [1]  *** Program nstaller ***                     [6]  Browser nstaller                                          
+echo [2]  Program nstaller                             [7]  VPN + Remote nstaller                                     
+echo [3]  Securty nstaller                             [8]  Meda Player nstaller                                     
+echo [4]  Developer Tools nstaller                     [9]  Chat Messenger nstaller                                   
+echo [5]  Drver nstaller                               [10] Games Launcher nstaller                                   
 echo ------------------------------------------------------------------------------------------------------------------------
-echo  [11] Mcrosoft Program nstaller                     [80] *** MS Store Upgrade All  ***                              
-echo  [12] Mcrosoft .NET nstaller                        [81] *** Chocolat nstallng ***                                
+echo [11] Mcrosoft Program nstaller                    [80] *** MS Store Upgrade All  ***                              
+echo [12] Mcrosoft .NET nstaller                       [81] *** Chocolat nstallng ***                                
 echo ------------------------------------------------------------------------------------------------------------------------
-echo  [21] * Wndows Fxed *                               [90] ** Standart PC nstaller All n One **                     
-echo  [22] * Mcrosoft Fxed *                                                                                             
+echo [21] * Wndows Fxed *                              [90] ** Standart PC nstaller All n One **                     
+echo [22] * Mcrosoft Fxed *                                                                                             
 echo ------------------------------------------------------------------------------------------------------------------------
-echo  [31] Setup Program nstaller SO + EXE               [98] Wndows Utlty                                            
-echo  [32] Setup Mcrosoft Offce nstaller EXE            [99] Mcrosoft Actvaton Scrpts                               
+echo [31] Setup Program nstaller SO + EXE              [98] Wndows Utlty                                            
+echo [32] Setup Mcrosoft Offce nstaller EXE            [99] Mcrosoft Actvaton Scrpts                               
 echo ------------------------------------------------------------------------------------------------------------------------
 echo                                     [.0.] Ext                                                                        
 echo ------------------------------------------------------------------------------------------------------------------------
@@ -30,102 +30,102 @@ color 9
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
-set /p choce="Enter your choce (0,1,2,3...): "
+set /p choice="Enter your choice (0,1,2,3...): "
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 
-REM Process user's choce
+REM Process user's choice
 
-f "%choce%"=="1" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu01 | ex'
+f "%choice%"=="1" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu01 | ex'
 
-f "%choce%"=="2" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu02 | ex'
+f "%choice%"=="2" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu02 | ex'
 
-f "%choce%"=="3" goto menu3
+f "%choice%"=="3" goto menu3
 ::C1
-f "%choce%"=="4" goto menu4
+f "%choice%"=="4" goto menu4
 ::D1
-f "%choce%"=="5" goto menu5
+f "%choice%"=="5" goto menu5
 ::E1
-f "%choce%"=="6" goto menu6
+f "%choice%"=="6" goto menu6
 ::F1
-f "%choce%"=="7" goto menu7
+f "%choice%"=="7" goto menu7
 ::G1
-f "%choce%"=="8" goto menu8
+f "%choice%"=="8" goto menu8
 ::H1
-f "%choce%"=="9" goto menu9
+f "%choice%"=="9" goto menu9
 ::1
-f "%choce%"=="10" goto menu10
+f "%choice%"=="10" goto menu10
 ::J1
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="11" goto menu11
+f "%choice%"=="11" goto menu11
 ::K1
-f "%choce%"=="12" goto menu12
+f "%choice%"=="12" goto menu12
 ::L1
-::f "%choce%"=="13" goto menu13
+::f "%choice%"=="13" goto menu13
 ::M1
-::f "%choce%"=="14" goto menu14
+::f "%choice%"=="14" goto menu14
 ::N1
-::f "%choce%"=="15" goto menu15
+::f "%choice%"=="15" goto menu15
 ::O1
-::f "%choce%"=="16" goto menu16
+::f "%choice%"=="16" goto menu16
 ::P1
-::f "%choce%"=="17" goto menu17
+::f "%choice%"=="17" goto menu17
 ::R1
-::f "%choce%"=="18" goto menu18
+::f "%choice%"=="18" goto menu18
 ::S1
-::f "%choce%"=="19" goto menu19
+::f "%choice%"=="19" goto menu19
 ::T1
-::f "%choce%"=="20" goto menu20
+::f "%choice%"=="20" goto menu20
 ::U1
-f "%choce%"=="21" goto menu21
+f "%choice%"=="21" goto menu21
 ::V1
-f "%choce%"=="22" goto menu22
+f "%choice%"=="22" goto menu22
 ::W1
-::f "%choce%"=="23" goto menu23
+::f "%choice%"=="23" goto menu23
 ::X1
-::f "%choce%"=="24" goto menu24
+::f "%choice%"=="24" goto menu24
 ::Y1
-::f "%choce%"=="25" goto menu25
+::f "%choice%"=="25" goto menu25
 ::Z1
-::f "%choce%"=="26" goto menu26
+::f "%choice%"=="26" goto menu26
 ::AB1
-::f "%choce%"=="27" goto menu27
+::f "%choice%"=="27" goto menu27
 ::AC1
-::f "%choce%"=="28" goto menu28
+::f "%choice%"=="28" goto menu28
 ::AD1
-::f "%choce%"=="29" goto menu29
+::f "%choice%"=="29" goto menu29
 ::AE1
-f "%choce%"=="30" goto menu30
+f "%choice%"=="30" goto menu30
 ::AF1
-f "%choce%"=="31" goto menu31
+f "%choice%"=="31" goto menu31
 ::AG1
-f "%choce%"=="32" goto menu32
+f "%choice%"=="32" goto menu32
 ::AH1
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="80" goto 80
-f "%choce%"=="81" goto 81
-f "%choce%"=="82" goto 82
+f "%choice%"=="80" goto 80
+f "%choice%"=="81" goto 81
+f "%choice%"=="82" goto 82
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="85" goto 85
-f "%choce%"=="86" goto 86
+f "%choice%"=="85" goto 85
+f "%choice%"=="86" goto 86
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="90" goto 90
+f "%choice%"=="90" goto 90
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="91" goto 91
+f "%choice%"=="91" goto 91
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="92" goto 92
+f "%choice%"=="92" goto 92
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="93" goto 93
+f "%choice%"=="93" goto 93
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="94" goto 94
+f "%choice%"=="94" goto 94
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="95" goto 95
+f "%choice%"=="95" goto 95
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="98" goto 98
-f "%choce%"=="99" goto 99
+f "%choice%"=="98" goto 98
+f "%choice%"=="99" goto 99
 ::---------------------------------------------------------------------------------------------------------------------------
-f "%choce%"=="0" goto ext
+f "%choice%"=="0" goto ext
 ::---------------------------------------------------------------------------------------------------------------------------
 
 goto main_menu
