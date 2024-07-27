@@ -38,7 +38,7 @@ if "%choice%"=="7" goto install_programA7
 if "%choice%"=="8" goto install_programA8
 if "%choice%"=="9" goto install_programA9
 if "%choice%"=="10" goto install_programA10
-if "%choice%"=="11" goto install_programA11
+if "%choice%"=="11" goto install_obs
 if "%choice%"=="12" goto install_programA12
 if "%choice%"=="13" goto install_programA13
 if "%choice%"=="14" goto install_programA14
@@ -154,7 +154,7 @@ goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA11
+:install_obs
 cls
 
 winget install OBSProject.OBSStudio -e
