@@ -54,7 +54,7 @@ if "%choice%"=="20" goto install_programA20
 
 
 
-if "%choice%"=="0" goto powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/main/start_program_main_menu | iex'
+if "%choice%"=="0" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/main/start_program_main_menu | iex'
 
 
 
