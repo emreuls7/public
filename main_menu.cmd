@@ -38,11 +38,11 @@ set /p choice="Enter your choice (0,1,2,3...): "
 
 
 REM Process user's choice
+
 if "%choice%"=="1" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu01 | iex'
 
-::---------------------------------------------------------------------------------------------------------------------------
 
-if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu01 | iex'
+if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
 
 if "%choice%"=="3" goto menu3
 ::C1
