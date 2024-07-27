@@ -1,11 +1,10 @@
 @echo off
 cls
 
-REM Functon: Shows the man menu
-:man_menu
+:main_menu
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
-echo --- Man Menu                  --- Welcome to Software nstaller ---                               CREATED BY MRLSx7 ---
+echo --- main Menu                  --- Welcome to Software nstaller ---                               CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
 echo  [1]  *** Program nstaller ***                       [6]  Browser nstaller                                          
 echo  [2]  Program nstaller                               [7]  VPN + Remote nstaller                                     
@@ -38,10 +37,9 @@ set /p choce="Enter your choce (0,1,2,3...): "
 
 REM Process user's choce
 
-f "%choce%"=="1" powershell -ExecutonPolcy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu01 | ex'
+f "%choce%"=="1" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu01 | ex'
 
-
-f "%choce%"=="2" powershell -ExecutonPolcy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu02 | ex'
+f "%choce%"=="2" powershell -ExecutonPolcy Bypass -Commaind "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu02 | ex'
 
 f "%choce%"=="3" goto menu3
 ::C1
@@ -130,15 +128,15 @@ f "%choce%"=="99" goto 99
 f "%choce%"=="0" goto ext
 ::---------------------------------------------------------------------------------------------------------------------------
 
-goto man_menu
+goto main_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 ::wnget upgrade
-::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --d --all productD --accept-package-agreements --accept-source-agreements --slent"
+::powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget upgrade --d --all productD --accept-package-agreements --accept-source-agreements --slent"
 
 ::wnget nstall
-::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d productD --accept-package-agreements --accept-source-agreements --slent"
+::powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget nstall --d productD --accept-package-agreements --accept-source-agreements --slent"
 
 
 
@@ -146,34 +144,34 @@ goto man_menu
 cls
 
 echo Mcrosoft Store Upgrade...
-powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
+powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
 
 echo Mcrosoft Desktop App nstaller...
 
 
 
-powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d Mcrosoft.DesktopAppnstaller --accept-package-agreements --accept-source-agreements --slent"
+powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget nstall --d Mcrosoft.DesktopAppnstaller --accept-package-agreements --accept-source-agreements --slent"
 
-powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d 9nblggh4nns1 --accept-package-agreements --accept-source-agreements --slent"
+powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget nstall --d 9nblggh4nns1 --accept-package-agreements --accept-source-agreements --slent"
 
-::powershell -NoProfle -ExecutonPolcy Bypass -Command "Add-AppxPackage -Regster -ManPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe"
+::powershell -NoProfle -ExecutonPolcy Bypass -Commaind "Add-AppxPackage -Regster -mainPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe"
 
-::powershell Add-AppxPackage -RegsterByFamlyName -ManPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe
+::powershell Add-AppxPackage -RegsterByFamlyName -mainPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe
 
-::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall -e --d 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --slent"
+::powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget nstall -e --d 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --slent"
 
 ::start /wat "" "ms-wndows-store://pdp?actvetab=pvot%3Aovervewtab&hl=en-us&gl=us&productd=9wzdncrfjbmp&referrer=storeforweb&mode=mn&pos=0%2C0%2C0%2C0"
 echo completed.
 pause
-goto man_menu
+goto main_menu
 ::---------------------------------------------------------------------------------------------------------------------------
 :81
 
 echo Chocolat nstaller...
-powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontManager]::SecurtyProtocol = [System.Net.ServcePontManager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
+powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontmainager]::SecurtyProtocol = [System.Net.ServcePontmainager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
 echo completed.
 pause
-goto man_menu
+goto main_menu
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
@@ -191,7 +189,7 @@ echo Dsable User Account Control
 echo Dsable Accounts: Lmt local account use of blank passwords to console logon only
 echo Turnng off Wndows Defender Frewall
 echo Network Folder FX 
-echo Ultmate Performance...
+echo Ultmate Performaince...
 echo Enable Admnstrator Account
 echo Enablng Remote Desktop for Admnstrator
 echo -------
@@ -221,10 +219,10 @@ f / "%answer%"=="N" goto N
 
 :Y
 echo nstallaton process startng...
-REM Add your nstallaton commands here
+REM Add your nstallaton commainds here
 
 echo Chocolat nstall...
-powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontManager]::SecurtyProtocol = [System.Net.ServcePontManager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
+powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontmainager]::SecurtyProtocol = [System.Net.ServcePontmainager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
 
 
 echo ------------------------
@@ -249,7 +247,7 @@ reg add "HKLM\SOFTWARE\Mcrosoft\Wndows\CurrentVerson\Polces\System" /v ConsentPr
 echo completed.
 echo ------------------------
 echo Dsablng 'Accounts: Lmt local account use of blank passwords to console logon only' settng...
-powershell -Command "Set-temProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LmtBlankPasswordUse' -Value 0"
+powershell -Commaind "Set-temProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LmtBlankPasswordUse' -Value 0"
 echo Accounts: Lmt local account use of blank passwords to console logon only settng has been dsabled.
 echo ------------------------
 
@@ -259,20 +257,20 @@ netsh advfrewall set allprofles state off
 echo Wndows Defender Frewall has been turned off.
 echo ------------------------
 echo Network Folder FX...
-reg add "HKEY_LOCAL_MACHNE\SYSTEM\CurrentControlSet\Servces\LanmanWorkstaton\Parameters" /v AllownsecureGuestAuth /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHNE\SYSTEM\CurrentControlSet\Servces\LanmainWorkstaton\Parameters" /v AllownsecureGuestAuth /t REG_DWORD /d 1 /f
 echo Network Folder FX.
 
 echo ------------------------
 
-echo Checkng f Ultmate Performance power plan already exsts...
+echo Checkng f Ultmate Performaince power plan already exsts...
 powercfg /lst | fndstr / "e9a42b02-d5df-448d-aa00-03f14749eb61" >nul
 
 f %errorlevel%==0 (
-    echo Ultmate Performance power plan already exsts. Actvatng t...
+    echo Ultmate Performaince power plan already exsts. Actvatng t...
     powercfg /setactve e9a42b02-d5df-448d-aa00-03f14749eb61
 ) else (
-    echo Ultmate Performance power plan does not exst. Creatng t...
-    powercfg /create "Ultmate Performance" e9a42b02-d5df-448d-aa00-03f14749eb61"
+    echo Ultmate Performaince power plan does not exst. Creatng t...
+    powercfg /create "Ultmate Performaince" e9a42b02-d5df-448d-aa00-03f14749eb61"
     powercfg /setactve e9a42b02-d5df-448d-aa00-03f14749eb61
 )
 
@@ -282,7 +280,7 @@ echo Dsablng Fast Startup...
 powercfg /h off
 
 
-echo Power management settngs are beng set to "Never"...
+echo Power mainagement settngs are beng set to "Never"...
 powercfg /change montor-tmeout-ac 0
 powercfg /change montor-tmeout-dc 0
 powercfg /change standby-tmeout-ac 0
@@ -292,7 +290,7 @@ powercfg /change dsk-tmeout-dc 0
 powercfg /change hbernate-tmeout-ac 0
 powercfg /change hbernate-tmeout-dc 0
 
-echo Ultmate Performance power plan actvated and all power settngs set to "Never".
+echo Ultmate Performaince power plan actvated and all power settngs set to "Never".
 
 echo ------------------------
 echo Enable admnstrator account
@@ -303,15 +301,15 @@ net user admnstrator 412199
 echo completed.
 echo ------------------------
 echo Enablng Remote Desktop for Admnstrator...
-powershell -Command "Set-temProperty -Path 'HKLM:\System\CurrentControlSet\Control\Termnal Server' -Name 'fDenyTSConnectons' -Value 0"
-powershell -Command "Enable-NetFrewallRule -DsplayGroup 'Remote Desktop'"
+powershell -Commaind "Set-temProperty -Path 'HKLM:\System\CurrentControlSet\Control\Termnal Server' -Name 'fDenyTSConnectons' -Value 0"
+powershell -Commaind "Enable-NetFrewallRule -DsplayGroup 'Remote Desktop'"
 echo Remote Desktop has been enabled for Admnstrator.
 echo ------------------------
 
 
 echo *** Mcrosoft Store Upgrade ***
 
-powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
+powershell -NoProfle -ExecutonPolcy Bypass -Commaind "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
 
 echo ------------------------
 echo Enable SMB 1.0/CFS Fle Sharng Support on Wndows
@@ -394,15 +392,15 @@ echo completed.
 echo ------------------------
 tmeout 7
 echo Runnng Submenu...
-powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+powershell -Commaind "$ProgressPreference='SlentlyContnue'; [Net.ServcePontmainager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
 echo completed.
 echo ------------------------
 
 pause
-goto man_menu
+goto main_menu
 
 :N
-goto man_menu
+goto main_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
@@ -411,24 +409,24 @@ goto man_menu
 cls
 
 echo Runnng Submenu...
-powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://chrsttus.com/wn" | ex
-::powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://gthub.com/ChrsTtusTech/wnutl/releases/latest/download/wnutl.ps1" | ex
+powershell -Commaind "$ProgressPreference='SlentlyContnue'; [Net.ServcePontmainager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://chrsttus.com/wn" | ex
+::powershell -Commaind "$ProgressPreference='SlentlyContnue'; [Net.ServcePontmainager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://gthub.com/ChrsTtusTech/wnutl/releases/latest/download/wnutl.ps1" | ex
 pause
-goto man_menu
+goto main_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 :99
 cls
 echo Runnng Submenu...
-::powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://get.actvated.wn | ex"
-powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
-::powershell -command "[Net.ServcePontManager]::SecurtyProtocol=[Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
-::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Command "rm https://get.actvated.wn | ex"
-::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Command "ex ((New-Object System.Net.WebClent).DownloadStrng('https://get.actvated.wn'))"
-::powershell -command "rm https://get.actvated.wn | ex"
+::powershell -Commaind "$ProgressPreference='SlentlyContnue'; [Net.ServcePontmainager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://get.actvated.wn | ex"
+powershell -Commaind "$ProgressPreference='SlentlyContnue'; [Net.ServcePontmainager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+::powershell -commaind "[Net.ServcePontmainager]::SecurtyProtocol=[Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Commaind "rm https://get.actvated.wn | ex"
+::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Commaind "ex ((New-Object System.Net.WebClent).DownloadStrng('https://get.actvated.wn'))"
+::powershell -commaind "rm https://get.actvated.wn | ex"
 pause
-goto man_menu
+goto main_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
