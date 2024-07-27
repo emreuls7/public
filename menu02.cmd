@@ -1,48 +1,41 @@
-xit@echo off
+@echo off
 cls
-REM Menu
 :menu2
 cls
-echo ========================================================================================================================
+echo ------------------------------------------------------------------------------------------------------------------------
 echo --- Menu2                             --- Other Program Installer ---                              CREATED BY MRLSx7 ---
-echo ========================================================================================================================
+echo ------------------------------------------------------------------------------------------------------------------------
 REM Choose a program to install:
-echo I [.1.]  TechPowerUp GPU-Z                                                                              Termius [.21.] I
-echo I [.2.]  Crystal Disk Info                                                                     FileZilla Server [.22.] I
-echo I [.3.]  Crystal Disk Mark                                                                                      [.23.] I
-echo I [.4.]  Core Temp                                                                                       WinZip [.24.] I
-echo I [.5.]                                                                                                  Notion [.25.] I
-echo I [.6.]  Lightshot                                                                                    FL Studio [.26.] I
-echo I [.7.]  Winget UI                                                                                  NDI 6 Tools [.27.] I
-echo I [.8.]                                                                                           NDI 6 Runtime [.28.] I
-echo I [.9.]                                                                                                         [.29.] I
-echo I [.10.]                                                                                Xtreme Download Manager [.30.] I
-echo I [.11.] Java 8                                                                                                 [.31.] I
-echo I [.12.] Free Download Manager                                                                       MSI Center [.32.] I
-echo I [.13.]                                                                                MSI Driver - App Center [.33.] I
-echo I [.14.] qBittorrent                                                                            CPUID CPU-Z MSI [.34.] I
-echo I [.15.] UniFi Network Application                                                              MSI Afterburner [.35.] I
-echo I [.16.]                                                                                      ASUS ArmouryCrate [.36.] I
-echo I [.17.]                                                                                        CPUID ROG CPU-Z [.37.] I
-echo I [.18.]                                                                                                        [.38.] I
-echo I [.19.]                                                                                                        [.39.] I
-echo I [.20.]                                                                                                        [.40.] I
-echo ========================================================================================================================
-echo I                                          [.0.] Back to Main Menu                                                     I
-echo ========================================================================================================================
+echo [1]  TechPowerUp GPU-Z                                      [21] Termius
+echo [2]  Crystal Disk Info                                      [22] FileZilla Server
+echo [3]  Crystal Disk Mark                                      [23]
+echo [4]  Core Temp                                              [24] WinZip 
+echo [5]                                                         [25] Notion 
+echo [6]  Lightshot                                              [26] FL Studio 
+echo [7]  Winget UI                                              [27] NDI 6 Tools 
+echo [8]                                                         [28] NDI 6 Runtime 
+echo [9]                                                         [29]
+echo [10]                                                        [30] Xtreme Download Manager
+echo [11] Java 8                                                 [31]
+echo [12] Free Download Manager                                  [32] MSI Center 
+echo [13]                                                        [33] MSI Driver - App Center 
+echo [14] qBittorrent                                            [34] CPUID CPU-Z MSI 
+echo [15] UniFi Network Application                              [35] MSI Afterburner 
+echo [16]                                                        [36] ASUS ArmouryCrate 
+echo [17]                                                        [37] CPUID ROG CPU-Z 
+echo [18]                                                        [38]
+echo [19]                                                        [39]
+echo [20]                                                        [40]
+echo ------------------------------------------------------------------------------------------------------------------------
+echo [0] Back to Main Menu
+echo ------------------------------------------------------------------------------------------------------------------------
 echo.
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 set /p choice="Enter your choice (0,1,2,3...): "
+color 2
 
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
 
-REM Process user's choice for
 if "%choice%"=="1" goto install_programB1
 if "%choice%"=="2" goto install_programB2
 if "%choice%"=="3" goto install_programB3
@@ -84,519 +77,507 @@ if "%choice%"=="38" goto install_programB38
 if "%choice%"=="39" goto install_programB39
 if "%choice%"=="40" goto install_programB40
 
-
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-
 if "%choice%"=="0" exit
-
-::---------------------------------------------------------------------------------------------------------------------------
 
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
-
-REM Installation functions for
+::------------------------------------------------------------------------------------------------------------------------
 :install_programB1
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
 winget install TechPowerUp.GPU-Z -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
 
+::------------------------------------------------------------------------------------------------------------------------
 :install_programB2
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install CrystalDewWorld.CrystalDiskInfo -e
-echo Installation completed.
+
 pause
 goto menu2
 
 :install_programB3
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install CrystalDewWorld.CrystalDiskMark -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB4
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install ALCPU.CoreTemp -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB5
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
  
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB6
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Skillbrains.Lightshot -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB7
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install SomePythonThings.WingetUIStore -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB8
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB9
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB10
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB11
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Oracle.JavaRuntimeEnvironment -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB12
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install SoftDeluxe.FreeDownloadManager -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB13
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB14
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 choco install qbittorrent -y
 ::winget install qBittorrent.qBittorrent -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB15
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 choco install ubiquiti-unifi-controller -y
 ::winget install UbiquitiInc.UnifiNetworkApplication -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB16
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB17
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB18
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB19
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB20
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB21
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Termius.Termius -e
 ::choco install termius -y
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB22
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 choco install filezilla.server -y
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB23
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB24
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Corel.WinZip -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB25
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Notion.Notion -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB26
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install ImageLine.FLStudio -e
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB27
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install NDI.NDITools -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB28
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install NDI.NDIRuntime -e
-echo Installation completed.
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB29
 cls
-echo ========================================================================================================================
-echo Installing Program...
 
-echo Installation completed.
+
+
+
 pause
 goto menu2
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB30
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install subhra74.XtremeDownloadManager -e
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB31
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB32
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program MSI Center 9NVMNJCR03XV Unknown msstore
+
+
+ MSI Center 9NVMNJCR03XV Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9NVMNJCR03XV --accept-package-agreements --accept-source-agreements --silent"
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB33
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program MSI Driver & App Center 9P9WDH947752 Unknown msstore
+
+
+ MSI Driver & App Center 9P9WDH947752 Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9P9WDH947752 --accept-package-agreements --accept-source-agreements --silent"
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB34
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install CPUID.CPU-Z.MSI -e
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB35
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Guru3D.Afterburner -e
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB36
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install Asus.ArmouryCrate
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 :install_programB37
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
+
+
+
 winget install CPUID.CPU-Z.ROG
-echo Installation completed.
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 
 :install_programB38
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 
 :install_programB39
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
+
 
 
 :install_programB40
 cls
-echo ========================================================================================================================
-echo Installing Program...
-REM Command to install Program
 
-echo Installation completed.
+
+
+
+
 pause
 goto menu2
 
 
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
-::---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
