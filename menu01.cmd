@@ -158,6 +158,7 @@ goto menu_01
 cls
 
 winget install OBSProject.OBSStudio -e
+pause
 
 echo ----------------------
 echo OBS Teleport install ? (Yes(Y) / No(N)):
