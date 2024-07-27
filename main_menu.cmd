@@ -40,7 +40,7 @@ set /p choice="Enter your choice (0,1,2,3...): "
 REM Process user's choice
 if "%choice%"=="1" (
 # Fetch the content from the URL
-$url = "https://raw.githubusercontent.com/emreuls7/public/program/main_menu.cmd"
+$url = "https://raw.githubusercontent.com/emreuls7/public/program/menu01"
 $content = Invoke-WebRequest -Uri $url
 
 # Write the content to a temporary file
