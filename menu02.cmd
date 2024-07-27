@@ -1,5 +1,5 @@
-
-
+@echo off
+cls
 REM Menu
 :menu2
 cls
