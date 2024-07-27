@@ -434,20 +434,7 @@ goto main_menu
 ::---------------------------------------------------------------------------------------------------------------------------
 
 :menu1
-
-# Fetch the content from the URL
-$url = "https://raw.githubusercontent.com/emreuls7/public/program/menu01.cmd"
-$content = Invoke-WebRequest -Uri $url
-
-# Write the content to a temporary file
-$tempFile = "$env:TEMP\menu1.cmd"
-Set-Content -Path $tempFile -Value $content.Content
-
-# Execute the file
-Start-Process -FilePath $tempFile -Wait -NoNewWindow
-
-# Optionally, delete the file after execution
-Remove-Item -Path $tempFile
+powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu01 | iex'
 
 
 REM Exit
