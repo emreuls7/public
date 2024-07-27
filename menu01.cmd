@@ -17,14 +17,14 @@ echo [8]  Notepad++                                 [18] Cute PDF Writer
 echo [9]  DeepL                                     [19] File Converter
 echo [10] Rufus                                     [20] Mozilla Thunderbird
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [0] Back to Main Menu
+echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
 echo.
 
 
 
 set /p choice="Enter your choice (0,1,2,3...): "
-color 8
+color 1
 
 
 REM Process user's choice for
@@ -50,30 +50,19 @@ if "%choice%"=="19" goto install_programA19
 if "%choice%"=="20" goto install_programA20
 
 
-
-
-
-
-if "%choice%"=="0" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/main/start_program_main_menu | iex'
-
-
+if "%choice%"=="0" exit
 
 goto menu1
-
-
-
-
-
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA1
 cls
 
-echo Installing Program...
+
  iTop Easy Desktop XPFCJVZV10X2WV Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
 
-pause
+
 goto menu1
 
 
@@ -81,11 +70,11 @@ goto menu1
 :install_programA2
 cls
 
-echo Installing Program...
+
 
 winget install PuTTY.PuTTY -e
 
-pause
+
 goto menu1
 
 
@@ -93,13 +82,13 @@ goto menu1
 :install_programA3
 cls
 
-echo Installing Program...
+
 
 choco install winscp -y
 ::winget install WinSCP.WinSCP -e
 ::winget install WinSCP.WinSCP.RC -e
 
-pause
+
 goto menu1
 
 
@@ -107,11 +96,11 @@ goto menu1
 :install_programA4
 cls
 
-echo Installing Program...
+
 
 choco install filezilla -y
 
-pause
+
 goto menu1
 
 
@@ -119,11 +108,11 @@ goto menu1
 :install_programA5
 cls
 
-echo Installing Program...
+
 
 winget install QL-Win.QuickLook -e
 
-pause
+
 goto menu1
 
 
@@ -131,12 +120,12 @@ goto menu1
 :install_programA6
 cls
 
-echo Installing Program...
+
 
 winget install Famatech.AdvancedIPScanner -e
 ::choco install advanced-ip-scanner -y
 
-pause
+
 goto menu1
 
 
@@ -144,11 +133,11 @@ goto menu1
 :install_programA7
 cls
 
-echo Installing Program...
+
 
 choco install advanced-port-scanner -y
 
-pause
+
 goto menu1
 
 
@@ -156,11 +145,11 @@ goto menu1
 :install_programA8
 cls
 
-echo Installing Program...
+
 
 winget install Notepad++.Notepad++ -e
 
-pause
+
 goto menu1
 
 
@@ -168,11 +157,11 @@ goto menu1
 :install_programA9
 cls
 
-echo Installing Program...
+
 
 winget install DeepL.DeepL -e
 
-pause
+
 goto menu1
 
 
@@ -180,13 +169,13 @@ goto menu1
 :install_programA10
 cls
 
-echo Installing Program...
+
  Rufus 9PC3H3V7Q9CH Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent"
 ::winget install Rufus.Rufus -e
 ::choco install rufus -y
 
-pause
+
 goto menu1
 
 
@@ -194,7 +183,7 @@ goto menu1
 :install_programA11
 cls
 
-echo Installing Program...
+
 
 winget install OBSProject.OBSStudio -e
 
@@ -208,7 +197,7 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\obs-teleport" "C:\Program Files\obs-studio\obs-plugins\64bit" obs-teleport.dll /IS
 echo Installation teleport completed.
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -219,7 +208,7 @@ goto menu1
 :install_programA12
 cls
 
-echo Installing Program...
+
 
 winget install RARLab.WinRAR -e
 
@@ -233,7 +222,7 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\WinRAR" "C:\Program Files\WinRAR" rarreg.key /IS
 echo completed.
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -244,7 +233,7 @@ goto menu1
 :install_programA13
 cls
 
-echo Installing Program...
+
 
 choco install anytoiso -y
 ::winget install CrystalIDEASoftware.AnyToISO -e
@@ -260,7 +249,7 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\setup\AnyToISO\AnyToISOcrack" "C:\Program Files (x86)\AnyToISO" anytoiso.exe /IS
 
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -271,7 +260,7 @@ goto menu1
 :install_programA14
 cls
 
-echo Installing Program...
+
 
 winget install RevoUninstaller.RevoUninstallerPro -e
 
@@ -285,7 +274,7 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\Revo_Uninstaller_Pro" "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro" revouninstallerpro5.lic /IS
 
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -296,7 +285,7 @@ goto menu1
 :install_programA15
 cls
 
-echo Installing Program...
+
 
 ::choco install partition-assistant-standard -y
 winget install AOMEI.PartitionAssistant -e
@@ -311,7 +300,7 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\AOMEI_Partition_Assistant_Pro" "C:\Program Files (x86)\AOMEI Partition Assistant" cfg.ini /IS
 
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -322,7 +311,7 @@ goto menu1
 :install_programA16
 cls
 
-echo Installing Program...
+
 
 winget install Tonec.InternetDownloadManager -e
 
@@ -336,7 +325,7 @@ if /i "%answer%"=="N" goto N
 powershell -command "irm https://massgrave.dev/ias | iex"
 echo completed.
 echo ----------------------
-pause
+
 goto menu1
 
 :N
@@ -347,11 +336,11 @@ goto menu1
 :install_programA17
 cls
 
-echo Installing Program...
+
 
 winget install Adobe.Acrobat.Reader.64-bit -e
 
-pause
+
 goto menu1
 
 
@@ -359,11 +348,11 @@ goto menu1
 :install_programA18
 cls
 
-echo Installing Program...
+
 
 winget install AcroSoftwareInc.CutePDFWriter -e
 
-pause
+
 goto menu1
 
 
@@ -371,11 +360,11 @@ goto menu1
 :install_programA19
 cls
 
-echo Installing Program...
+
 
 winget install AdrienAllard.FileConverter -e
 
-pause
+
 goto menu1
 
 
@@ -383,11 +372,11 @@ goto menu1
 :install_programA20
 cls
 
-echo Installing Program...
+
 
 winget install Mozilla.Thunderbird -e
 
-pause
+
 goto menu1
 
 
