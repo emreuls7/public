@@ -168,9 +168,8 @@ if /i "%answer%"=="N" goto N
 
 :Y
 robocopy "\\192.168.18.2\setup\source\key-crack+\obs-teleport" "C:\Program Files\obs-studio\obs-plugins\64bit" obs-teleport.dll /IS
-echo Installation teleport completed.
-echo ----------------------
 
+echo ----------------------
 goto menu_01
 
 :N
@@ -191,9 +190,8 @@ if /i "%answer%"=="N" goto N
 
 :Y
 robocopy "\\192.168.18.2\setup\source\key-crack+\WinRAR" "C:\Program Files\WinRAR" rarreg.key /IS
-echo completed.
-echo ----------------------
 
+echo ----------------------
 goto menu_01
 
 :N
