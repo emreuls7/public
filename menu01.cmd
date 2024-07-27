@@ -1,10 +1,10 @@
 @echo off
 cls
 REM Menu
-:menu1
+:menu_01
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
-echo --- Menu1                            --- *** Program Installer *** ---                             CREATED BY MRLSx7 ---
+echo --- menu_01                          --- *** Program Installer *** ---                             CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
 echo [1]  iTop Easy Desktop                         [11] OBS Studio + Teleport
 echo [2]  PuTTY                                     [12] ** WinRar + Key **
@@ -52,131 +52,105 @@ if "%choice%"=="20" goto install_programA20
 
 if "%choice%"=="0" exit
 
-goto menu1
+goto menu_01
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA1
 cls
+::iTop Easy Desktop XPFCJVZV10X2WV Unknown msstore
 
-
- iTop Easy Desktop XPFCJVZV10X2WV Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA2
 cls
 
-
-
 winget install PuTTY.PuTTY -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA3
 cls
 
-
-
 choco install winscp -y
 ::winget install WinSCP.WinSCP -e
 ::winget install WinSCP.WinSCP.RC -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA4
 cls
 
-
-
 choco install filezilla -y
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA5
 cls
 
-
-
 winget install QL-Win.QuickLook -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA6
 cls
 
-
-
 winget install Famatech.AdvancedIPScanner -e
 ::choco install advanced-ip-scanner -y
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA7
 cls
 
-
-
 choco install advanced-port-scanner -y
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA8
 cls
 
-
-
 winget install Notepad++.Notepad++ -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA9
 cls
 
-
-
 winget install DeepL.DeepL -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA10
 cls
 
+::Rufus 9PC3H3V7Q9CH Unknown msstore
 
- Rufus 9PC3H3V7Q9CH Unknown msstore
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent"
+
 ::winget install Rufus.Rufus -e
 ::choco install rufus -y
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
@@ -196,17 +170,15 @@ robocopy "\\192.168.18.2\setup\source\key-crack+\obs-teleport" "C:\Program Files
 echo Installation teleport completed.
 echo ----------------------
 
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA12
 cls
-
-
 
 winget install RARLab.WinRAR -e
 
@@ -221,17 +193,15 @@ robocopy "\\192.168.18.2\setup\source\key-crack+\WinRAR" "C:\Program Files\WinRA
 echo completed.
 echo ----------------------
 
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA13
 cls
-
-
 
 choco install anytoiso -y
 ::winget install CrystalIDEASoftware.AnyToISO -e
@@ -248,17 +218,15 @@ robocopy "\\192.168.18.2\setup\source\setup\AnyToISO\AnyToISOcrack" "C:\Program 
 
 echo ----------------------
 
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA14
 cls
-
-
 
 winget install RevoUninstaller.RevoUninstallerPro -e
 
@@ -272,18 +240,15 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\Revo_Uninstaller_Pro" "C:\ProgramData\VS Revo Group\Revo Uninstaller Pro" revouninstallerpro5.lic /IS
 
 echo ----------------------
-
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA15
 cls
-
-
 
 ::choco install partition-assistant-standard -y
 winget install AOMEI.PartitionAssistant -e
@@ -298,18 +263,15 @@ if /i "%answer%"=="N" goto N
 robocopy "\\192.168.18.2\setup\source\key-crack+\AOMEI_Partition_Assistant_Pro" "C:\Program Files (x86)\AOMEI Partition Assistant" cfg.ini /IS
 
 echo ----------------------
-
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA16
 cls
-
-
 
 winget install Tonec.InternetDownloadManager -e
 
@@ -323,64 +285,45 @@ if /i "%answer%"=="N" goto N
 powershell -command "irm https://massgrave.dev/ias | iex"
 echo completed.
 echo ----------------------
-
-goto menu1
+goto menu_01
 
 :N
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA17
 cls
 
-
-
 winget install Adobe.Acrobat.Reader.64-bit -e
-
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA18
 cls
 
-
-
 winget install AcroSoftwareInc.CutePDFWriter -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA19
 cls
 
-
-
 winget install AdrienAllard.FileConverter -e
 
-
-goto menu1
+goto menu_01
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_programA20
 cls
 
-
-
 winget install Mozilla.Thunderbird -e
 
-
-goto menu1
-
-
-
-
-
+goto menu_01
 
 
 
