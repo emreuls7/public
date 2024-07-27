@@ -1,30 +1,29 @@
 @echo off
 cls
 
-REM Function: Shows the main menu
-:main_menu
+REM Functon: Shows the man menu
+:man_menu
 cls
-echo ========================================================================================================================
-echo --- Main Menu                  --- Welcome to Software Installer ---                               CREATED BY MRLSx7 ---
-echo ========================================================================================================================
-REM Choose a program to install:
-echo I [1]  *** Program Installer ***                       [6]  Browser Installer                                          I
-echo I [2]  Program Installer                               [7]  VPN + Remote Installer                                     I
-echo I [3]  Security Installer                              [8]  Media Player Installer                                     I
-echo I [4]  Developer Tools Installer                       [9]  Chat Messenger Installer                                   I
-echo I [5]  Driver Installer                                [10] Games Launcher Installer                                   I
 echo ------------------------------------------------------------------------------------------------------------------------
-echo I [11] Microsoft Program Installer                     [80] *** MS Store Upgrade All  ***                              I
-echo I [12] Microsoft .NET Installer                        [81] *** Chocolat Installing ***                                I
+echo --- Man Menu                  --- Welcome to Software nstaller ---                               CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
-echo I [21] * Windows Fixed *                               [90] ** Standart PC Installer All in One **                     I
-echo I [22] * Microsoft Fixed *                                                                                             I
+echo  [1]  *** Program nstaller ***                       [6]  Browser nstaller                                          
+echo  [2]  Program nstaller                               [7]  VPN + Remote nstaller                                     
+echo  [3]  Securty nstaller                              [8]  Meda Player nstaller                                     
+echo  [4]  Developer Tools nstaller                       [9]  Chat Messenger nstaller                                   
+echo  [5]  Drver nstaller                                [10] Games Launcher nstaller                                   
 echo ------------------------------------------------------------------------------------------------------------------------
-echo I [31] Setup Program Installer ISO + EXE               [98] Windows Utility                                            I
-echo I [32] Setup Microsoft Office Installer EXE            [99] Microsoft Activation Scripts                               I
-echo ========================================================================================================================
-echo I                                    [.0.] Exit                                                                        I
-echo ========================================================================================================================
+echo  [11] Mcrosoft Program nstaller                     [80] *** MS Store Upgrade All  ***                              
+echo  [12] Mcrosoft .NET nstaller                        [81] *** Chocolat nstallng ***                                
+echo ------------------------------------------------------------------------------------------------------------------------
+echo  [21] * Wndows Fxed *                               [90] ** Standart PC nstaller All n One **                     
+echo  [22] * Mcrosoft Fxed *                                                                                             
+echo ------------------------------------------------------------------------------------------------------------------------
+echo  [31] Setup Program nstaller SO + EXE               [98] Wndows Utlty                                            
+echo  [32] Setup Mcrosoft Offce nstaller EXE            [99] Mcrosoft Actvaton Scrpts                               
+echo ------------------------------------------------------------------------------------------------------------------------
+echo                                     [.0.] Ext                                                                        
+echo ------------------------------------------------------------------------------------------------------------------------
 echo.
 
 REM Set color for the menu
@@ -32,149 +31,149 @@ color 9
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
-set /p choice="Enter your choice (0,1,2,3...): "
+set /p choce="Enter your choce (0,1,2,3...): "
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 
-REM Process user's choice
+REM Process user's choce
 
-if "%choice%"=="1" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu01 | iex'
+f "%choce%"=="1" powershell -ExecutonPolcy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu01 | ex'
 
 
-if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
+f "%choce%"=="2" powershell -ExecutonPolcy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentLst 'rm https://raw.gthubusercontent.com/emreuls7/publc/program_url/menu02 | ex'
 
-if "%choice%"=="3" goto menu3
+f "%choce%"=="3" goto menu3
 ::C1
-if "%choice%"=="4" goto menu4
+f "%choce%"=="4" goto menu4
 ::D1
-if "%choice%"=="5" goto menu5
+f "%choce%"=="5" goto menu5
 ::E1
-if "%choice%"=="6" goto menu6
+f "%choce%"=="6" goto menu6
 ::F1
-if "%choice%"=="7" goto menu7
+f "%choce%"=="7" goto menu7
 ::G1
-if "%choice%"=="8" goto menu8
+f "%choce%"=="8" goto menu8
 ::H1
-if "%choice%"=="9" goto menu9
-::I1
-if "%choice%"=="10" goto menu10
+f "%choce%"=="9" goto menu9
+::1
+f "%choce%"=="10" goto menu10
 ::J1
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="11" goto menu11
+f "%choce%"=="11" goto menu11
 ::K1
-if "%choice%"=="12" goto menu12
+f "%choce%"=="12" goto menu12
 ::L1
-::if "%choice%"=="13" goto menu13
+::f "%choce%"=="13" goto menu13
 ::M1
-::if "%choice%"=="14" goto menu14
+::f "%choce%"=="14" goto menu14
 ::N1
-::if "%choice%"=="15" goto menu15
+::f "%choce%"=="15" goto menu15
 ::O1
-::if "%choice%"=="16" goto menu16
+::f "%choce%"=="16" goto menu16
 ::P1
-::if "%choice%"=="17" goto menu17
+::f "%choce%"=="17" goto menu17
 ::R1
-::if "%choice%"=="18" goto menu18
+::f "%choce%"=="18" goto menu18
 ::S1
-::if "%choice%"=="19" goto menu19
+::f "%choce%"=="19" goto menu19
 ::T1
-::if "%choice%"=="20" goto menu20
+::f "%choce%"=="20" goto menu20
 ::U1
-if "%choice%"=="21" goto menu21
+f "%choce%"=="21" goto menu21
 ::V1
-if "%choice%"=="22" goto menu22
+f "%choce%"=="22" goto menu22
 ::W1
-::if "%choice%"=="23" goto menu23
+::f "%choce%"=="23" goto menu23
 ::X1
-::if "%choice%"=="24" goto menu24
+::f "%choce%"=="24" goto menu24
 ::Y1
-::if "%choice%"=="25" goto menu25
+::f "%choce%"=="25" goto menu25
 ::Z1
-::if "%choice%"=="26" goto menu26
+::f "%choce%"=="26" goto menu26
 ::AB1
-::if "%choice%"=="27" goto menu27
+::f "%choce%"=="27" goto menu27
 ::AC1
-::if "%choice%"=="28" goto menu28
+::f "%choce%"=="28" goto menu28
 ::AD1
-::if "%choice%"=="29" goto menu29
+::f "%choce%"=="29" goto menu29
 ::AE1
-if "%choice%"=="30" goto menu30
+f "%choce%"=="30" goto menu30
 ::AF1
-if "%choice%"=="31" goto menu31
+f "%choce%"=="31" goto menu31
 ::AG1
-if "%choice%"=="32" goto menu32
+f "%choce%"=="32" goto menu32
 ::AH1
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="80" goto 80
-if "%choice%"=="81" goto 81
-if "%choice%"=="82" goto 82
+f "%choce%"=="80" goto 80
+f "%choce%"=="81" goto 81
+f "%choce%"=="82" goto 82
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="85" goto 85
-if "%choice%"=="86" goto 86
+f "%choce%"=="85" goto 85
+f "%choce%"=="86" goto 86
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="90" goto 90
+f "%choce%"=="90" goto 90
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="91" goto 91
+f "%choce%"=="91" goto 91
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="92" goto 92
+f "%choce%"=="92" goto 92
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="93" goto 93
+f "%choce%"=="93" goto 93
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="94" goto 94
+f "%choce%"=="94" goto 94
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="95" goto 95
+f "%choce%"=="95" goto 95
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="98" goto 98
-if "%choice%"=="99" goto 99
+f "%choce%"=="98" goto 98
+f "%choce%"=="99" goto 99
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="0" goto exit
-::---------------------------------------------------------------------------------------------------------------------------
-
-goto main_menu
-
+f "%choce%"=="0" goto ext
 ::---------------------------------------------------------------------------------------------------------------------------
 
-::winget upgrade
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --id --all productID --accept-package-agreements --accept-source-agreements --silent"
+goto man_menu
 
-::winget install
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id productID --accept-package-agreements --accept-source-agreements --silent"
+::---------------------------------------------------------------------------------------------------------------------------
+
+::wnget upgrade
+::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --d --all productD --accept-package-agreements --accept-source-agreements --slent"
+
+::wnget nstall
+::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d productD --accept-package-agreements --accept-source-agreements --slent"
 
 
 
 :80
 cls
-echo ========================================================================================================================
-echo Microsoft Store Upgrade...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
 
-echo Microsoft Desktop App Installer...
+echo Mcrosoft Store Upgrade...
+powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
+
+echo Mcrosoft Desktop App nstaller...
 
 
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id Microsoft.DesktopAppInstaller --accept-package-agreements --accept-source-agreements --silent"
+powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d Mcrosoft.DesktopAppnstaller --accept-package-agreements --accept-source-agreements --slent"
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9nblggh4nns1 --accept-package-agreements --accept-source-agreements --silent"
+powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall --d 9nblggh4nns1 --accept-package-agreements --accept-source-agreements --slent"
 
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-AppxPackage -Register -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
+::powershell -NoProfle -ExecutonPolcy Bypass -Command "Add-AppxPackage -Regster -ManPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe"
 
-::powershell Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+::powershell Add-AppxPackage -RegsterByFamlyName -ManPackage Mcrosoft.DesktopAppnstaller_8wekyb3d8bbwe
 
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install -e --id 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --silent"
+::powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget nstall -e --d 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --slent"
 
-::start /wait "" "ms-windows-store://pdp?activetab=pivot%3Aoverviewtab&hl=en-us&gl=us&productid=9wzdncrfjbmp&referrer=storeforweb&mode=mini&pos=0%2C0%2C0%2C0"
+::start /wat "" "ms-wndows-store://pdp?actvetab=pvot%3Aovervewtab&hl=en-us&gl=us&productd=9wzdncrfjbmp&referrer=storeforweb&mode=mn&pos=0%2C0%2C0%2C0"
 echo completed.
 pause
-goto main_menu
+goto man_menu
 ::---------------------------------------------------------------------------------------------------------------------------
 :81
-echo ========================================================================================================================
-echo Chocolat Installer...
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+echo Chocolat nstaller...
+powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontManager]::SecurtyProtocol = [System.Net.ServcePontManager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
 echo completed.
 pause
-goto main_menu
+goto man_menu
 
 
 ::---------------------------------------------------------------------------------------------------------------------------
@@ -183,262 +182,262 @@ goto main_menu
 
 :90
 cls
-echo ========================================================================================================================
-echo Install List
+
+echo nstall Lst
 echo -------------
-echo Chocolat Install
-echo Enable Network Discovery
-echo Disable User Account Control
-echo Disable Accounts: Limit local account use of blank passwords to console logon only
-echo Turning off Windows Defender Firewall
-echo Network Folder FIX 
-echo Ultimate Performance...
-echo Enable Administrator Account
-echo Enabling Remote Desktop for Administrator
+echo Chocolat nstall
+echo Enable Network Dscovery
+echo Dsable User Account Control
+echo Dsable Accounts: Lmt local account use of blank passwords to console logon only
+echo Turnng off Wndows Defender Frewall
+echo Network Folder FX 
+echo Ultmate Performance...
+echo Enable Admnstrator Account
+echo Enablng Remote Desktop for Admnstrator
 echo -------
-echo *** Microsoft Store Upgrade... ***
-echo Microsoft DesktopAppInstaller Upgrade
+echo *** Mcrosoft Store Upgrade... ***
+echo Mcrosoft DesktopAppnstaller Upgrade
 echo -------
-echo Enable SMB 1.0/CIFS File Sharing Support on Windows
+echo Enable SMB 1.0/CFS Fle Sharng Support on Wndows
 echo dotnet3.5+4.5.1+.4.5.2
-echo Microsoft.VCRedist.2005+2015+
+echo Mcrosoft.VCRedst.2005+2015+
 echo Google Chrome
 echo Notepad++
-echo WinRAR
+echo WnRAR
 echo VLC
 echo Adobe Acrobat Reader
-echo Cute PDF Writer
-echo File Converter
+echo Cute PDF Wrter
+echo Fle Converter
 echo UltraVnc
 echo DeepL
-echo Microsoft Office ProPlus 2021
+echo Mcrosoft Offce ProPlus 2021
 echo -------
-echo and Microsoft Activation Scripts open
-echo ========================================================================================================================
-echo Do you want to install it on your computer? (Yes(Y) / No(N):
+echo and Mcrosoft Actvaton Scrpts open
+
+echo Do you want to nstall t on your computer? (Yes(Y) / No(N):
 set /p answer=
-if /i "%answer%"=="Y" goto Y
-if /i "%answer%"=="N" goto N
+f / "%answer%"=="Y" goto Y
+f / "%answer%"=="N" goto N
 
 :Y
-echo Installation process starting...
-REM Add your installation commands here
+echo nstallaton process startng...
+REM Add your nstallaton commands here
 
-echo Chocolat Install...
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+echo Chocolat nstall...
+powershell Set-ExecutonPolcy Bypass -Scope Process -Force; [System.Net.ServcePontManager]::SecurtyProtocol = [System.Net.ServcePontManager]::SecurtyProtocol -bor 3072; ex ((New-Object System.Net.WebClent).DownloadStrng('https://communty.chocolatey.org/nstall.ps1'))
 
 
 echo ------------------------
-netsh advfirewall firewall set rule group="Network Discovery" new enable=Yes
-netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes
-sc config fdphost start= auto
-sc config fdrespub start= auto
-sc config upnphost start= auto
-sc config SSDPSRV start= auto
+netsh advfrewall frewall set rule group="Network Dscovery" new enable=Yes
+netsh advfrewall frewall set rule group="Fle and Prnter Sharng" new enable=Yes
+sc confg fdphost start= auto
+sc confg fdrespub start= auto
+sc confg upnphost start= auto
+sc confg SSDPSRV start= auto
 net start fdphost
 net start fdrespub
 net start upnphost
 net start SSDPSRV
-echo Network Discovery and File Sharing have been enabled.
+echo Network Dscovery and Fle Sharng have been enabled.
 echo ------------------------
-echo Disable User Account Control
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 0 /f
+echo Dsable User Account Control
+reg add "HKLM\SOFTWARE\Mcrosoft\Wndows\CurrentVerson\Polces\System" /v EnableLUA /t REG_DWORD /d 0 /f
 echo completed.
 echo ------------------------
-echo Set ConsentPromptBehaviorAdmin to 0 (elevate without prompting)
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f
+echo Set ConsentPromptBehavorAdmn to 0 (elevate wthout promptng)
+reg add "HKLM\SOFTWARE\Mcrosoft\Wndows\CurrentVerson\Polces\System" /v ConsentPromptBehavorAdmn /t REG_DWORD /d 0 /f
 echo completed.
 echo ------------------------
-echo Disabling 'Accounts: Limit local account use of blank passwords to console logon only' setting...
-powershell -Command "Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LimitBlankPasswordUse' -Value 0"
-echo Accounts: Limit local account use of blank passwords to console logon only setting has been disabled.
+echo Dsablng 'Accounts: Lmt local account use of blank passwords to console logon only' settng...
+powershell -Command "Set-temProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa' -Name 'LmtBlankPasswordUse' -Value 0"
+echo Accounts: Lmt local account use of blank passwords to console logon only settng has been dsabled.
 echo ------------------------
 
 echo ------------------------
-echo Turning off Windows Defender Firewall...
-netsh advfirewall set allprofiles state off
-echo Windows Defender Firewall has been turned off.
+echo Turnng off Wndows Defender Frewall...
+netsh advfrewall set allprofles state off
+echo Wndows Defender Frewall has been turned off.
 echo ------------------------
-echo Network Folder FIX...
-reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f
-echo Network Folder FIX.
+echo Network Folder FX...
+reg add "HKEY_LOCAL_MACHNE\SYSTEM\CurrentControlSet\Servces\LanmanWorkstaton\Parameters" /v AllownsecureGuestAuth /t REG_DWORD /d 1 /f
+echo Network Folder FX.
 
 echo ------------------------
 
-echo Checking if Ultimate Performance power plan already exists...
-powercfg /list | findstr /i "e9a42b02-d5df-448d-aa00-03f14749eb61" >nul
+echo Checkng f Ultmate Performance power plan already exsts...
+powercfg /lst | fndstr / "e9a42b02-d5df-448d-aa00-03f14749eb61" >nul
 
-if %errorlevel%==0 (
-    echo Ultimate Performance power plan already exists. Activating it...
-    powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+f %errorlevel%==0 (
+    echo Ultmate Performance power plan already exsts. Actvatng t...
+    powercfg /setactve e9a42b02-d5df-448d-aa00-03f14749eb61
 ) else (
-    echo Ultimate Performance power plan does not exist. Creating it...
-    powercfg /create "Ultimate Performance" e9a42b02-d5df-448d-aa00-03f14749eb61"
-    powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
+    echo Ultmate Performance power plan does not exst. Creatng t...
+    powercfg /create "Ultmate Performance" e9a42b02-d5df-448d-aa00-03f14749eb61"
+    powercfg /setactve e9a42b02-d5df-448d-aa00-03f14749eb61
 )
 
 
-echo Disabling Fast Startup...
+echo Dsablng Fast Startup...
 :: Turn off Fast Startup
 powercfg /h off
 
 
-echo Power management settings are being set to "Never"...
-powercfg /change monitor-timeout-ac 0
-powercfg /change monitor-timeout-dc 0
-powercfg /change standby-timeout-ac 0
-powercfg /change standby-timeout-dc 0
-powercfg /change disk-timeout-ac 0
-powercfg /change disk-timeout-dc 0
-powercfg /change hibernate-timeout-ac 0
-powercfg /change hibernate-timeout-dc 0
+echo Power management settngs are beng set to "Never"...
+powercfg /change montor-tmeout-ac 0
+powercfg /change montor-tmeout-dc 0
+powercfg /change standby-tmeout-ac 0
+powercfg /change standby-tmeout-dc 0
+powercfg /change dsk-tmeout-ac 0
+powercfg /change dsk-tmeout-dc 0
+powercfg /change hbernate-tmeout-ac 0
+powercfg /change hbernate-tmeout-dc 0
 
-echo Ultimate Performance power plan activated and all power settings set to "Never".
-
-echo ------------------------
-echo Enable administrator account
-net user administrator /active:yes
-echo ------------------------
-echo Set the password for administrator
-net user administrator 412199
-echo completed.
-echo ------------------------
-echo Enabling Remote Desktop for Administrator...
-powershell -Command "Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 0"
-powershell -Command "Enable-NetFirewallRule -DisplayGroup 'Remote Desktop'"
-echo Remote Desktop has been enabled for Administrator.
-echo ------------------------
-
-
-echo *** Microsoft Store Upgrade ***
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
+echo Ultmate Performance power plan actvated and all power settngs set to "Never".
 
 echo ------------------------
-echo Enable SMB 1.0/CIFS File Sharing Support on Windows
-dism.exe /online /enable-feature /featurename:"SMB1Protocol"
-echo SMB 1.0/CIFS File Sharing Support has been enabled.
+echo Enable admnstrator account
+net user admnstrator /actve:yes
 echo ------------------------
-timeout 7
-echo Installing...
-choco install dotnet3.5 -y
+echo Set the password for admnstrator
+net user admnstrator 412199
 echo completed.
 echo ------------------------
-echo Installing...
-choco install dotnet4.5.1 -y
+echo Enablng Remote Desktop for Admnstrator...
+powershell -Command "Set-temProperty -Path 'HKLM:\System\CurrentControlSet\Control\Termnal Server' -Name 'fDenyTSConnectons' -Value 0"
+powershell -Command "Enable-NetFrewallRule -DsplayGroup 'Remote Desktop'"
+echo Remote Desktop has been enabled for Admnstrator.
+echo ------------------------
+
+
+echo *** Mcrosoft Store Upgrade ***
+
+powershell -NoProfle -ExecutonPolcy Bypass -Command "wnget upgrade --all --accept-package-agreements --accept-source-agreements --slent"
+
+echo ------------------------
+echo Enable SMB 1.0/CFS Fle Sharng Support on Wndows
+dsm.exe /onlne /enable-feature /featurename:"SMB1Protocol"
+echo SMB 1.0/CFS Fle Sharng Support has been enabled.
+echo ------------------------
+tmeout 7
+echo nstallng...
+choco nstall dotnet3.5 -y
 echo completed.
 echo ------------------------
-echo Installing...
-choco install dotnet4.5.2 -y
+echo nstallng...
+choco nstall dotnet4.5.1 -y
 echo completed.
 echo ------------------------
-timeout 7
-echo Installing...
-winget install Microsoft.VCRedist.2005.x86 -e
-winget install Microsoft.VCRedist.2005.x64 -e
-winget install Microsoft.VCRedist.2008.x86 -e
-winget install Microsoft.VCRedist.2008.x64 -e
-winget install Microsoft.VCRedist.2010.x86 -e
-winget install Microsoft.VCRedist.2010.x64 -e
-winget install Microsoft.VCRedist.2012.x86 -e
-winget install Microsoft.VCRedist.2012.x64 -e
-winget install Microsoft.VCRedist.2013.x86 -e
-winget install Microsoft.VCRedist.2013.x64 -e
-winget install Microsoft.VCRedist.2015+.x86 -e
-winget install Microsoft.VCRedist.2015+.x64 -e
+echo nstallng...
+choco nstall dotnet4.5.2 -y
 echo completed.
 echo ------------------------
-echo Installing...
-winget install Google.Chrome -e
+tmeout 7
+echo nstallng...
+wnget nstall Mcrosoft.VCRedst.2005.x86 -e
+wnget nstall Mcrosoft.VCRedst.2005.x64 -e
+wnget nstall Mcrosoft.VCRedst.2008.x86 -e
+wnget nstall Mcrosoft.VCRedst.2008.x64 -e
+wnget nstall Mcrosoft.VCRedst.2010.x86 -e
+wnget nstall Mcrosoft.VCRedst.2010.x64 -e
+wnget nstall Mcrosoft.VCRedst.2012.x86 -e
+wnget nstall Mcrosoft.VCRedst.2012.x64 -e
+wnget nstall Mcrosoft.VCRedst.2013.x86 -e
+wnget nstall Mcrosoft.VCRedst.2013.x64 -e
+wnget nstall Mcrosoft.VCRedst.2015+.x86 -e
+wnget nstall Mcrosoft.VCRedst.2015+.x64 -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install Notepad++.Notepad++ -e
+echo nstallng...
+wnget nstall Google.Chrome -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install RARLab.WinRAR -e
+echo nstallng...
+wnget nstall Notepad++.Notepad++ -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install VideoLAN.VLC -e
+echo nstallng...
+wnget nstall RARLab.WnRAR -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install Adobe.Acrobat.Reader.64-bit -e
+echo nstallng...
+wnget nstall VdeoLAN.VLC -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install AcroSoftwareInc.CutePDFWriter -e
+echo nstallng...
+wnget nstall Adobe.Acrobat.Reader.64-bt -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install AdrienAllard.FileConverter  -e
+echo nstallng...
+wnget nstall AcroSoftwarenc.CutePDFWrter -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install uvncbvba.UltraVnc -e
-echo completed.
-timeout 7
-echo UltraVNC Servis Run...
-start /wait "" "C:\Program Files\uvnc bvba\UltraVNC\winvnc.exe"
+echo nstallng...
+wnget nstall AdrenAllard.FleConverter  -e
 echo completed.
 echo ------------------------
-echo Installing...
-winget install DeepL.DeepL -e
+echo nstallng...
+wnget nstall uvncbvba.UltraVnc -e
+echo completed.
+tmeout 7
+echo UltraVNC Servs Run...
+start /wat "" "C:\Program Fles\uvnc bvba\UltraVNC\wnvnc.exe"
 echo completed.
 echo ------------------------
-timeout 7
-echo Installing...
-start /wait "" "\\192.168.18.2\setup\source\office\office2021ProPlus_tr\Setup64.exe"
+echo nstallng...
+wnget nstall DeepL.DeepL -e
 echo completed.
 echo ------------------------
-timeout 7
-echo Running Submenu...
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
+tmeout 7
+echo nstallng...
+start /wat "" "\\192.168.18.2\setup\source\offce\offce2021ProPlus_tr\Setup64.exe"
 echo completed.
 echo ------------------------
-echo ========================================================================================================================
+tmeout 7
+echo Runnng Submenu...
+powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+echo completed.
+echo ------------------------
+
 pause
-goto main_menu
+goto man_menu
 
 :N
-goto main_menu
+goto man_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 
 :98
 cls
-echo ========================================================================================================================
-echo Running Submenu...
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
+
+echo Runnng Submenu...
+powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://chrsttus.com/wn" | ex
+::powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm "https://gthub.com/ChrsTtusTech/wnutl/releases/latest/download/wnutl.ps1" | ex
 pause
-goto main_menu
+goto man_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
 :99
 cls
-echo Running Submenu...
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::powershell -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm https://get.activated.win | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.activated.win'))"
-::powershell -command "irm https://get.activated.win | iex"
+echo Runnng Submenu...
+::powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://get.actvated.wn | ex"
+powershell -Command "$ProgressPreference='SlentlyContnue'; [Net.ServcePontManager]::SecurtyProtocol = [Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+::powershell -command "[Net.ServcePontManager]::SecurtyProtocol=[Net.SecurtyProtocolType]::Tls12; rm https://massgrave.dev/get | ex"
+::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Command "rm https://get.actvated.wn | ex"
+::PowerShell.exe -NoProfle -ExecutonPolcy Bypass -Command "ex ((New-Object System.Net.WebClent).DownloadStrng('https://get.actvated.wn'))"
+::powershell -command "rm https://get.actvated.wn | ex"
 pause
-goto main_menu
+goto man_menu
 
 ::---------------------------------------------------------------------------------------------------------------------------
 
-REM Exit
-:exit
+REM Ext
+:ext
 cls
-echo ========================================================================================================================
-echo --- Exit                      --- Thank you for using Software Installer ---                       CREATED BY MRLSx7 ---
-echo ========================================================================================================================
-echo Exiting...
-timeout /t 3 /nobreak >nul
-exit
+echo ------------------------------------------------------------------------------------------------------------------------
+echo --- Ext                      --- Thank you for usng Software nstaller ---                       CREATED BY MRLSx7 ---
+echo ------------------------------------------------------------------------------------------------------------------------
+echo Extng...
+tmeout /t 3 /nobreak >nul
+ext
