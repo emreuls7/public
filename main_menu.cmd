@@ -38,22 +38,8 @@ set /p choice="Enter your choice (0,1,2,3...): "
 
 
 REM Process user's choice
-if "%choice%"=="1" (
-# Fetch the content from the URL
-$url = "https://raw.githubusercontent.com/emreuls7/public/program/menu01"
-$content = Invoke-WebRequest -Uri $url
+if "%choice%"=="1" goto menu1
 
-# Write the content to a temporary file
-$tempFile = "$env:TEMP\main_menu.cmd"
-Set-Content -Path $tempFile -Value $content.Content
-
-# Execute the file
-Start-Process -FilePath $tempFile -Wait -NoNewWindow
-
-# Optionally, delete the file after execution
-Remove-Item -Path $tempFile
-
-)
 ::---------------------------------------------------------------------------------------------------------------------------
 
 if "%choice%"=="2" goto menu2
@@ -435,7 +421,6 @@ goto main_menu
 
 :99
 cls
-echo ========================================================================================================================
 echo Running Submenu...
 ::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
 powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
@@ -446,6 +431,23 @@ powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointMa
 pause
 goto main_menu
 
+::---------------------------------------------------------------------------------------------------------------------------
+
+:menu1
+
+# Fetch the content from the URL
+$url = "https://raw.githubusercontent.com/emreuls7/public/program/menu01"
+$content = Invoke-WebRequest -Uri $url
+
+# Write the content to a temporary file
+$tempFile = "$env:TEMP\menu1"
+Set-Content -Path $tempFile -Value $content.Content
+
+# Execute the file
+Start-Process -FilePath $tempFile -Wait -NoNewWindow
+
+# Optionally, delete the file after execution
+Remove-Item -Path $tempFile
 
 
 REM Exit
