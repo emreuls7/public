@@ -17,8 +17,8 @@ echo ---------------------------------------------------------------------------
 echo [21] * Windows Fixed *                               [90] ** Standart PC Installer All in One **
 echo [22] * Microsoft Fixed *
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [31] Setup Program Installer ISO + EXE               [98] Windows Utility
-echo [32] Setup Microsoft Office Installer EXE            [99] Microsoft Activation Scripts
+echo [31] Setup Program Installer ISO + EXE               [98] Windows Utility ( winutil )
+echo [32] Setup Microsoft Office Installer EXE            [99] Microsoft Activation Scripts ( MAS )
 echo ------------------------------------------------------------------------------------------------------------------------
 echo [.0.] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
@@ -35,21 +35,21 @@ if "%choice%"=="1" powershell -ExecutionPolicy Bypass -Command "Start-Process po
 
 if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
 
-if "%choice%"=="3" goto menu3
+if "%choice%"=="3" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu03 | iex'
 ::C1
-if "%choice%"=="4" goto menu4
+if "%choice%"=="4" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu04 | iex'
 ::D1
-if "%choice%"=="5" goto menu5
+if "%choice%"=="5" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu05 | iex'
 ::E1
-if "%choice%"=="6" goto menu6
+if "%choice%"=="6" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu06 | iex'
 ::F1
-if "%choice%"=="7" goto menu7
+if "%choice%"=="7" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu07 | iex'
 ::G1
-if "%choice%"=="8" goto menu8
+if "%choice%"=="8" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu08 | iex'
 ::H1
-if "%choice%"=="9" goto menu9
+if "%choice%"=="9" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu09 | iex'
 ::I1
-if "%choice%"=="10" goto menu10
+if "%choice%"=="10" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu10 | iex'
 ::J1
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="11" goto menu11
