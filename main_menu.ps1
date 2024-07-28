@@ -45,7 +45,7 @@ function Handle-Choice {
                 
                 # Execute the downloaded script
                 Write-Host "Executing script..."
-                Start-Process -FilePath "cmd.exe" -ArgumentList "/c $tempFile" -Wait -NoNewWindow
+                Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
             } catch {
                 Write-Host "An error occurred: $_"
             }
@@ -53,6 +53,7 @@ function Handle-Choice {
                 # Clean up the downloaded file
                 if (Test-Path $tempFile) {
                     Remove-Item $tempFile -Force
+                    Write-Host "Temporary file removed."
                 }
             }
         }
