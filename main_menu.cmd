@@ -23,35 +23,35 @@ echo ---------------------------------------------------------------------------
 echo [.0.] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
 echo.
+::---------------------------------------------------------------------------------------------------------------------------
 color 9
-
+::---------------------------------------------------------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
-
-REM Process user's choice
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="1" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu01 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="3" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu03 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="4" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu04 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="5" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu05 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="6" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu06 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="7" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu07 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="8" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu08 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="9" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu09 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="10" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu10 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="11" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu11 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="12" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu12 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 ::if "%choice%"=="13" goto menu13
 
 ::if "%choice%"=="14" goto menu14
@@ -67,11 +67,11 @@ if "%choice%"=="12" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 ::if "%choice%"=="19" goto menu19
 
 ::if "%choice%"=="20" goto menu20
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="21" gpowershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu21 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="22" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu22 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 ::if "%choice%"=="23" goto menu23
 
 ::if "%choice%"=="24" goto menu24
@@ -87,16 +87,15 @@ if "%choice%"=="22" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 ::if "%choice%"=="29" goto menu29
 
 ::if "%choice%"=="30" goto menu30
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="31" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu31 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="32" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu32 | iex'
-
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="81" powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="82" goto 82
 
 if "%choice%"=="85" goto 85
@@ -114,16 +113,14 @@ if "%choice%"=="93" goto 93
 if "%choice%"=="94" goto 94
 
 if "%choice%"=="95" goto 95
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="98" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1 | iex'
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E | iex'"
-
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="0" goto exit
-
+::---------------------------------------------------------------------------------------------------------------------------
 goto main_menu
-
-
 ::---------------------------------------------------------------------------------------------------------------------------
 :90
 cls
@@ -220,11 +217,9 @@ if %errorlevel%==0 (
     powercfg /setactive e9a42b02-d5df-448d-aa00-03f14749eb61
 )
 
-
 echo Disabling Fast Startup...
 :: Turn off Fast Startup
 powercfg /h off
-
 
 echo Power management settings are being set to "Never"...
 powercfg /change monitor-timeout-ac 0
@@ -341,14 +336,11 @@ echo Running Submenu...
 powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
 echo completed.
 echo ------------------------
-
 pause
 goto main_menu
 
 :N
 goto main_menu
-
-
 ::---------------------------------------------------------------------------------------------------------------------------
 REM Exit
 :exit
