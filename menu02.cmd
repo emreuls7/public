@@ -56,8 +56,8 @@ if "%choice%"=="15" winget install ImageLine.FLStudio -e
 if "%choice%"=="16" winget install NDI.NDITools -e
 if "%choice%"=="17" winget install NDI.NDIRuntime -e
 if "%choice%"=="18" winget install subhra74.XtremeDownloadManager -e
-if "%choice%"=="19" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9NVMNJCR03XV --accept-package-agreements --accept-source-agreements --silent" ::MSI Center 9NVMNJCR03XV Unknown msstore
-if "%choice%"=="20" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9P9WDH947752 --accept-package-agreements --accept-source-agreements --silent" ::MSI Driver App Center 9P9WDH947752 Unknown msstore
+if "%choice%"=="19" winget install --id 9NVMNJCR03XV --accept-package-agreements --accept-source-agreements --silent ::MSI Center 9NVMNJCR03XV Unknown msstore
+if "%choice%"=="20" winget install --id 9P9WDH947752 --accept-package-agreements --accept-source-agreements --silent ::MSI Driver App Center 9P9WDH947752 Unknown msstore
 if "%choice%"=="21" winget install CPUID.CPU-Z.MSI -e
 if "%choice%"=="22" winget install Guru3D.Afterburner -e
 if "%choice%"=="23" winget install Asus.ArmouryCrate
