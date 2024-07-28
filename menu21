@@ -3,7 +3,7 @@ $url = "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu21.cmd
 $content = Invoke-WebRequest -Uri $url
 
 # Write the content to a temporary file
-$tempFile = "$env:TEMP\menu02.cmd"
+$tempFile = "$env:TEMP\menu21.cmd"
 Set-Content -Path $tempFile -Value $content.Content
 
 # Execute the file
