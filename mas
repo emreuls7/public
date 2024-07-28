@@ -6,6 +6,7 @@ try {
     $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
 
     # URL'den içeriği al
+    Write-Output "İçeriği URL'den alıyor..."
     $response = Invoke-WebRequest -Uri $url -ErrorAction Stop
     $content = $response.Content
 
@@ -13,6 +14,7 @@ try {
     $tempFile = Join-Path -Path $env:TEMP -ChildPath "mas.cmd"
 
     # İçeriği geçici dosyaya yaz
+    Write-Output "İçeriği geçici dosyaya yazıyor..."
     Set-Content -Path $tempFile -Value $content -ErrorAction Stop
 
     # Dosyanın içeriğini kontrol et
@@ -20,15 +22,20 @@ try {
     Get-Content -Path $tempFile
 
     # Dosyayı çalıştır
+    Write-Output "Dosyayı çalıştırıyor..."
     Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
 
     # İsteğe bağlı olarak, çalıştırmadan sonra dosyayı sil
+    Write-Output "Dosyayı siliyor..."
     Remove-Item -Path $tempFile -ErrorAction Stop
+
+    Write-Output "İşlem tamamlandı."
 }
 catch {
     # Bir hata oluşursa hata mesajını yazdır
     Write-Error "Bir hata oluştu: $_"
 }
+
 
 # https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd
 # https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/0884271c4fcdc72d95bce7c5c7bdf77ef4a9bcef/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd
