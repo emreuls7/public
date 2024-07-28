@@ -1,6 +1,4 @@
-# Clear the screen
-Clear-Host
-
+# Function to display the menu
 function Show-Menu {
     Clear-Host
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
@@ -108,13 +106,15 @@ function Handle-Choice {
             Invoke-Expression $scriptContent
         }
         99 { 
-            Write-Host "You chose Microsoft Activation Scripts (MAS)." 
+            Write-Host "You chose Microsoft Activation Scripts (MAS)."
+            ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://massgrave.dev/get | iex'
         }
         0 { exit }
         default { Write-Host "Invalid choice, please try again." }
     }
 }
 
+# Main loop to display the menu and handle choices
 do {
     Show-Menu
     $choice = Read-Host "Enter your choice"
