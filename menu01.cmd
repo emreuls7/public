@@ -52,7 +52,16 @@ if %errorlevel% equ 0 (
 )
 )
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="32" winget install --id 9PC3H3V7Q9CH -e --accept-package-agreements --accept-source-agreements --silent
+if "%choice%"=="32" ( 
+winget list --id XPFCJVZV10X2WV -e >nul 2>&1
+if %errorlevel% equ 0 (
+    echo Uygulama zaten yüklü. Güncelleme yapılıyor...
+    winget upgrade --id 9PC3H3V7Q9CH -e --accept-package-agreements --accept-source-agreements --silent
+) else (
+    echo Uygulama yüklü değil. Yükleniyor...
+    winget install --id XPFCJVZV10X2WV -e --accept-package-agreements --accept-source-agreements --silent
+)
+)
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="21" goto install_obs
 if "%choice%"=="22" goto winrar
