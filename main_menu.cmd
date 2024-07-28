@@ -30,7 +30,7 @@ set /p choice="Enter your choice (0,1,2,3...): "
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="1" (
     echo Seçim 1 yapıldı, PowerShell komutunu çalıştırıyorum...
-    
+
     :: PowerShell komutunu çalıştır ve betiği al
     powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
         $scriptUrl = 'https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd'
@@ -40,9 +40,17 @@ if "%choice%"=="1" (
         Write-Output 'Yüklenen betik dosyası: ' + $scriptPath
         Start-Process cmd.exe -ArgumentList '/c ' + $scriptPath -NoNewWindow -Wait
     }"
+
+    :: Başka bir seçim yapmak isteyip istemediğini sor
+    set /p repeat="Başka bir seçim yapmak ister misiniz? (E/H): "
+    if /i "%repeat%"=="E" goto menu
 ) else (
-    echo Geçersiz seçim veya çıkış yapılıyor...
+    echo Geçersiz seçim. Lütfen geçerli bir seçim yapın.
+    :: Kullanıcıya tekrar seçim yapma şansı ver
+    goto menu
 )
+
+endlocal
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
