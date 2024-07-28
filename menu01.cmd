@@ -6,42 +6,49 @@ cls
 echo ------------------------------------------------------------------------------------------------------------------------
 echo --- menu_01                          --- *** Program Installer *** ---                             CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [1]  iTop Easy Desktop                         [11] OBS Studio + Teleport
-echo [2]  PuTTY                                     [12] ** WinRar + Key **
-echo [3]  WinSCP                                    [13] Any To ISO + Key
-echo [4]  FileZilla Client                          [14] Revo Uninstaller Pro + Key
-echo [5]  QuickLook                                 [15] AOMEI Partitio Assistant + Key
-echo [6]  Advanced IP Scanner                       [16] Internet Download Manager + Activation Script
-echo [7]  Advanced Port Scan                        [17] Adobe Acrobat Reader
-echo [8]  Notepad++                                 [18] Cute PDF Writer
-echo [9]  DeepL                                     [19] File Converter
-echo [10] Rufus                                     [20] Mozilla Thunderbird
+echo [1]  PuTTY (winget)                                 [21] *OBS Studio (winget) + Teleport (18.2-copy) *
+echo [2]  WinSCP (choco)                                 [22] **WinRar (winget) + Key (18.2-copy)**
+echo [3]  *Notepad++ (winget)                            [23] Any To ISO (choco) + Key (18.2-copy)
+echo [4]  FileZilla Client (choco)                       [24] Revo Uninstaller Pro (winget) + Key (18.2-copy)
+echo [5]  QuickLook (winget)                             [25] AOMEI Partitio Assistant (winget) + Key (18.2-copy)
+echo [6]  *Advanced IP Scanner (winget)                  [26] Internet Download Manager (winget) + Activation Script (url)
+echo [7]  Advanced Port Scan (choco)                   
+echo [8]  DeepL (winget)                             
+echo [9]  Adobe Acrobat Reader (winget)                                  
+echo [10] Cute PDF Writer (winget)                                   
+echo [11] File Converter (winget)
+echo [12] Mozilla Thunderbird (winget)
+echo ------------------------------------------------------------------------------------------------------------------------
+echo [31] iTop Easy Desktop (msstore)
+echo [32] Rufus (msstore)
 echo ------------------------------------------------------------------------------------------------------------------------
 echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
 echo ------------------------------------------------------------------------------------------------------------------------
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="1" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
-if "%choice%"=="2" winget install PuTTY.PuTTY -e
-if "%choice%"=="3" choco install winscp -y
+if "%choice%"=="1" winget install PuTTY.PuTTY -e
+if "%choice%"=="2" choco install winscp -y
+if "%choice%"=="3" winget install Notepad++.Notepad++ -e
 if "%choice%"=="4" choco install filezilla -y
 if "%choice%"=="5" winget install QL-Win.QuickLook -e
 if "%choice%"=="6" winget install Famatech.AdvancedIPScanner -e
 if "%choice%"=="7" choco install advanced-port-scanner -y
-if "%choice%"=="8" winget install Notepad++.Notepad++ -e
-if "%choice%"=="9" winget install DeepL.DeepL -e
-if "%choice%"=="10" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent"
-if "%choice%"=="11" goto install_obs
-if "%choice%"=="12" goto winrar
-if "%choice%"=="13" goto anytoiso
-if "%choice%"=="14" goto revounis
-if "%choice%"=="15" goto aomeipart
-if "%choice%"=="16" goto idm
-if "%choice%"=="17" winget install Adobe.Acrobat.Reader.64-bit -e
-if "%choice%"=="18" winget install AcroSoftwareInc.CutePDFWriter -e
-if "%choice%"=="19" winget install AdrienAllard.FileConverter -e
-if "%choice%"=="20" winget install Mozilla.Thunderbird -e
+if "%choice%"=="8" winget install DeepL.DeepL -e
+if "%choice%"=="9" winget install Adobe.Acrobat.Reader.64-bit -e
+if "%choice%"=="10" winget install AcroSoftwareInc.CutePDFWriter -e
+if "%choice%"=="11" winget install AdrienAllard.FileConverter -e
+if "%choice%"=="12" winget install Mozilla.Thunderbird -e
+::---------------------------------------------------------------------------------------------------------------------------
+if "%choice%"=="31" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent" ::iTop Easy Desktop
+if "%choice%"=="32" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent" ::Rufus
+::---------------------------------------------------------------------------------------------------------------------------
+if "%choice%"=="21" goto install_obs
+if "%choice%"=="22" goto winrar
+if "%choice%"=="23" goto anytoiso
+if "%choice%"=="24" goto revounis
+if "%choice%"=="25" goto aomeipart
+if "%choice%"=="26" goto idm
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="0" exit
 ::---------------------------------------------------------------------------------------------------------------------------
