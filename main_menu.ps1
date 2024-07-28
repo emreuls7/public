@@ -56,23 +56,23 @@ function Handle-Choice {
     switch ($Choice) {
         1 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd" }
         2 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu02.cmd" }
-        3 { Write-Host "You chose Security Install." }
-        4 { Write-Host "You chose Developer Tools Install." }
-        5 { Write-Host "You chose Driver Install." }
-        6 { Write-Host "You chose Browser Install." }
-        7 { Write-Host "You chose VPN + Remote Install." }
-        8 { Write-Host "You chose Media Player Install." }
-        9 { Write-Host "You chose Chat Messenger Install." }
-        10 { Write-Host "You chose Games Launcher Install." }
-        11 { Write-Host "You chose Microsoft Program Install." }
-        12 { Write-Host "You chose Microsoft .NET Install." }
-        21 { Write-Host "You chose Windows Fixed." }
-        22 { Write-Host "You chose Microsoft Fixed." }
-        31 { Write-Host "You chose Setup Program Install ISO + EXE." }
-        32 { Write-Host "You chose Setup Microsoft Office Install EXE." }
-        80 { Write-Host "You chose Winget Install." }
-        81 { Write-Host "You chose Chocolat Install." }
-        90 { Write-Host "You chose Standard PC Install All in One." }
+        3 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu03.cmd" }
+        4 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu04.cmd" }
+        5 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu05.cmd" }
+        6 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu06.cmd" }
+        7 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu07.cmd" }
+        8 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu08.cmd" }
+        9 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu09.cmd" }
+        10 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu10.cmd" }
+        11 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu11.cmd" }
+        12 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu12.cmd" }
+        21 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu21.cmd" }
+        22 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu22.cmd" }
+        31 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu31.cmd" }
+        32 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu32.cmd" }
+        80 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu80.cmd" }
+        81 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu81.cmd" }
+        90 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu90.cmd" }
         98 { 
             Write-Host "You chose Windows Utility (winutil)."
             $url = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winutil.ps1"
