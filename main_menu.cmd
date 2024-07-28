@@ -94,7 +94,7 @@ if "%choice%"=="32" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winget.ps1 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="81" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/chocolatey.ps1 | iex'
+if "%choice%"=="81" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/chocolatey | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="82" goto 82
 
