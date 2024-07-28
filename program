@@ -77,7 +77,7 @@ function Handle-Choice {
 
         90 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu90.cmd" }
 
-        91 { winget upgrade --all; choco upgrade chocolatey; choco upgrade all }
+        91 { winget upgrade --all; choco upgrade chocolatey -y; choco upgrade all -y }
 
         98 { 
             Write-Host "You chose Windows Utility (winutil)." -ForegroundColor Cyan
