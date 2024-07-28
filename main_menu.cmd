@@ -52,9 +52,9 @@ if "%choice%"=="9" powershell -ExecutionPolicy Bypass -Command "Start-Process po
 if "%choice%"=="10" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu10 | iex'
 
 
-if "%choice%"=="11" goto menu11
+if "%choice%"=="11" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu11 | iex'
 
-if "%choice%"=="12" goto menu12
+if "%choice%"=="12" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu12 | iex'
 
 ::if "%choice%"=="13" goto menu13
 
@@ -72,9 +72,9 @@ if "%choice%"=="12" goto menu12
 
 ::if "%choice%"=="20" goto menu20
 
-if "%choice%"=="21" goto menu21
+if "%choice%"=="21" gpowershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu21 | iex'
 
-if "%choice%"=="22" goto menu22
+if "%choice%"=="22" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu22 | iex'
 
 ::if "%choice%"=="23" goto menu23
 
@@ -90,11 +90,11 @@ if "%choice%"=="22" goto menu22
 
 ::if "%choice%"=="29" goto menu29
 
-if "%choice%"=="30" goto menu30
+::if "%choice%"=="30" goto menu30
 
-if "%choice%"=="31" goto menu31
+if "%choice%"=="31" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu31 | iex'
 
-if "%choice%"=="32" goto menu32
+if "%choice%"=="32" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu32 | iex'
 
 
 if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
