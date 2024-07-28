@@ -1,5 +1,5 @@
 @echo off
-color 20
+color 02
 cls
 :menu_02
 cls
