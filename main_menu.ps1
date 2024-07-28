@@ -83,7 +83,10 @@ function Handle-Choice {
             Write-Host "You chose Microsoft Activation Scripts (MAS)."
             Start-Process powershell.exe -ArgumentList "irm https://massgrave.dev/get | iex" -Verb RunAs
         }
-        0 { exit }
+        0 { 
+            Write-Host "Exiting..."
+            exit
+        }
         default { Write-Host "Invalid choice, please try again." }
     }
 }
