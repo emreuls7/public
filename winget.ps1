@@ -1,31 +1,52 @@
-# İlerleme bilgilerini gizle
-$ProgressPreference = 'SilentlyContinue'
+# İlerleme bilgilerini ve mesajları göstermek için ayarlar
+$ProgressPreference = 'Continue'
+$VerbosePreference = 'Continue'
 
-# İndirme dizinini belirle
-$downloadPath = "$env:TEMP\winget_install"
+# İndirme dizini ayarla
+$downloadPath = "$env:USERPROFILE\Downloads\WinGetInstall"
 
-# İndirme dizinini oluştur
-if (-not (Test-Path $downloadPath)) {
-    New-Item -Path $downloadPath -ItemType Directory | Out-Null
+# İndirme dizini varsa temizle, yoksa oluştur
+if (Test-Path $downloadPath) {
+    Write-Host "Cleaning up old files in $downloadPath..."
+    Remove-Item -Path $downloadPath -Recurse -Force
+}
+Write-Host "Creating download directory $downloadPath..."
+New-Item -Path $downloadPath -ItemType Directory
+
+# Bilgilendirme mesajını gösterir
+Write-Host "Downloading WinGet and its dependencies to $downloadPath..."
+
+# WinGet ve bağımlılıklarını indirir
+$files = @{
+    'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' = 'https://aka.ms/getwinget'
+    'Microsoft.VCLibs.x64.14.00.Desktop.appx' = 'https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx'
+    'Microsoft.UI.Xaml.2.8.x64.appx' = 'https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx'
 }
 
-# WinGet ve bağımlılıklarını indir
-Write-Output "Downloading WinGet and its dependencies..."
+foreach ($file in $files.GetEnumerator()) {
+    $fileName = $file.Key
+    $url = $file.Value
+    $outputPath = Join-Path -Path $downloadPath -ChildPath $fileName
+    
+    Write-Host "Downloading $fileName from $url..."
+    Invoke-WebRequest -Uri $url -OutFile $outputPath -Verbose
+    
+    Write-Host "Downloaded $fileName to $outputPath"
+}
 
-Invoke-WebRequest -Uri "https://aka.ms/getwinget" -OutFile "$downloadPath\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
-Invoke-WebRequest -Uri "https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx" -OutFile "$downloadPath\Microsoft.VCLibs.x64.14.00.Desktop.appx"
-Invoke-WebRequest -Uri "https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx" -OutFile "$downloadPath\Microsoft.UI.Xaml.2.8.x64.appx"
+# İndirilen paketleri yükler
+Write-Host "Installing downloaded packages..."
 
-# Paketleri yükle
-Write-Output "Installing packages..."
+$packages = @(
+    'Microsoft.VCLibs.x64.14.00.Desktop.appx',
+    'Microsoft.UI.Xaml.2.8.x64.appx',
+    'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
+)
 
-Add-AppxPackage -Path "$downloadPath\Microsoft.VCLibs.x64.14.00.Desktop.appx"
-Add-AppxPackage -Path "$downloadPath\Microsoft.UI.Xaml.2.8.x64.appx"
-Add-AppxPackage -Path "$downloadPath\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
+foreach ($package in $packages) {
+    $packagePath = Join-Path -Path $downloadPath -ChildPath $package
+    Write-Host "Installing $packagePath..."
+    Add-AppxPackage -Path $packagePath -Verbose
+}
 
-# Temizlik yap
-Write-Output "Cleaning up..."
-
-Remove-Item -Path $downloadPath -Recurse -Force
-
-Write-Output "WinGet and dependencies installed successfully."
+Write-Host "Installation complete."
