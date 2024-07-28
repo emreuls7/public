@@ -1,1 +1,25 @@
+# Set the security protocol to TLS 1.2
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
+try {
+    # Fetch the content from the URL
+    $url = "https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E.cmd"
+    $content = Invoke-WebRequest -Uri $url -ErrorAction Stop
+
+    # Write the content to a temporary file
+    $tempFile = "$env:TEMP\MAS_AIO-CRC32_31F7FD1E.cmd"
+    Set-Content -Path $tempFile -Value $content.Content -ErrorAction Stop
+
+    # Execute the file
+    Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
+
+    # Optionally, delete the file after execution
+    Remove-Item -Path $tempFile -ErrorAction Stop
+}
+catch {
+    Write-Error "An error occurred: $_"
+}
+
+
+# https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E.cmd
+# https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/0884271c4fcdc72d95bce7c5c7bdf77ef4a9bcef/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd
