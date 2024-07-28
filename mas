@@ -1,40 +1,16 @@
-# Güvenli iletişim sağlamak için TLS 1.2 güvenlik protokolünü ayarla
+# TLS 1.2 Protokolü Ayarı
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-try {
-    # İçeriği alacağımız URL'yi tanımla
-    $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
+# URL'yi tanımla
+$url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
 
-    # URL'den içeriği al
-    Write-Output "İçeriği URL'den alıyor..."
-    $response = Invoke-WebRequest -Uri $url -ErrorAction Stop
-    $content = $response.Content
+# İçeriği al ve bir dosyaya kaydet
+$outputPath = "mas.cmd"
 
-    # Geçici dosya için yolu tanımla
-    $tempFile = Join-Path -Path $env:TEMP -ChildPath "mas.cmd"
+Write-Output "İçeriği URL'den alıyor ve $outputPath olarak kaydediyor..."
+Invoke-WebRequest -Uri $url -OutFile $outputPath -ErrorAction Stop
 
-    # İçeriği geçici dosyaya yaz
-    Write-Output "İçeriği geçici dosyaya yazıyor..."
-    Set-Content -Path $tempFile -Value $content -ErrorAction Stop
-
-    # Dosyanın içeriğini kontrol et
-    Write-Output "Dosya içeriği:"
-    Get-Content -Path $tempFile
-
-    # Dosyayı çalıştır
-    Write-Output "Dosyayı çalıştırıyor..."
-    Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
-
-    # İsteğe bağlı olarak, çalıştırmadan sonra dosyayı sil
-    Write-Output "Dosyayı siliyor..."
-    Remove-Item -Path $tempFile -ErrorAction Stop
-
-    Write-Output "İşlem tamamlandı."
-}
-catch {
-    # Bir hata oluşursa hata mesajını yazdır
-    Write-Error "Bir hata oluştu: $_"
-}
+Write-Output "İçerik başarıyla kaydedildi. Dosya yolu: $outputPath"
 
 
 # https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd
