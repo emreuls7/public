@@ -109,27 +109,32 @@ function Handle-Choice {
         }
         99 { 
             Write-Host "You chose Microsoft Activation Scripts (MAS)." 
+            
+            # Ensure the script uses TLS 1.2 for secure communication
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
             # URL of the script to download and execute
             $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
+
             # Define the path to save the downloaded script
             $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
+
             try {
                 # Download the script
                 Write-Host "Downloading script from $url..."
                 Invoke-WebRequest -Uri $url -OutFile $tempFile
                 Write-Host "Script downloaded to $tempFile"
-                
+        
                 # Execute the downloaded script
                 Write-Host "Executing script..."
                 Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
             } catch {
                 Write-Host "An error occurred: $_"
-            }
-            finally {
+            } finally {
                 # Clean up the downloaded file
-                if (Test-Path $tempFile) {
-                    Remove-Item $tempFile -Force
-                    Write-Host "Temporary file removed."
+            if (Test-Path $tempFile) {
+                Remove-Item $tempFile -Force
+                Write-Host "Temporary file removed."
                 }
             }
         }
