@@ -1,4 +1,5 @@
 @echo off
+color 04
 cls
 :menu4
 cls
