@@ -1,15 +1,12 @@
+# TLS 1.2 güvenlik protokolünü ayarla
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
+# URL'den dosya içeriğini al
 $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
-$outputPath = "mas.cmd"
+$content = Invoke-WebRequest -Uri $url
 
-try {
-    Write-Output "İçeriği URL'den alıyor ve $outputPath olarak kaydediyor..."
-    Invoke-WebRequest -Uri $url -OutFile $outputPath -ErrorAction Stop
-    Write-Output "İçerik başarıyla kaydedildi. Dosya yolu: $outputPath"
-} catch {
-    Write-Output "Bir hata oluştu: $_"
-}
+# İçeriği çalıştır
+Invoke-Expression $content.Content
 
 
 
