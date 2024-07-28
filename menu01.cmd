@@ -1,4 +1,5 @@
 @echo off
+color 70
 cls
 :menu_01
 cls
@@ -20,7 +21,6 @@ echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
 echo ------------------------------------------------------------------------------------------------------------------------
-color 70
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="1" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
 if "%choice%"=="2" winget install PuTTY.PuTTY -e
