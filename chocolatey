@@ -26,3 +26,6 @@ try {
 
 # Optionally, delete the file after execution
 Remove-Item -Path $tempFile -Force
+
+# Pause to allow the user to review any output or error messages
+Read-Host -Prompt "Press Enter to exit..."
