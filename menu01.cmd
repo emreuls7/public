@@ -41,8 +41,8 @@ if "%choice%"=="10" winget install AcroSoftwareInc.CutePDFWriter -e
 if "%choice%"=="11" winget install AdrienAllard.FileConverter -e
 if "%choice%"=="12" winget install Mozilla.Thunderbird -e
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="31" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent" ::iTop Easy Desktop
-if "%choice%"=="32" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent" ::Rufus
+if "%choice%"=="31" winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent ::iTop Easy Desktop
+if "%choice%"=="32" winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent ::Rufus
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="21" goto install_obs
 if "%choice%"=="22" goto winrar
