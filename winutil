@@ -1,24 +1,13 @@
-# Set the security protocol to TLS 1.2
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+# URL'den scripti indir
+$scriptUrl = "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
+$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP
+$scriptPath = "$env:TEMP\winutil.ps1"
 
-try {
-    # Fetch the content from the URL
-    $url = "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
-    $content = Invoke-WebRequest -Uri $url -ErrorAction Stop
+# Scripti geçici bir dosyaya kaydet
+$scriptContent.Content | Out-File -FilePath $scriptPath -Encoding UTF8
 
-    # Write the content to a temporary file
-    $tempFile = "$env:TEMP\winutil.ps1"
-    Set-Content -Path $tempFile -Value $content.Content -ErrorAction Stop
-
-    # Execute the file
-    Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
-
-    # Optionally, delete the file after execution
-    Remove-Item -Path $tempFile -ErrorAction Stop
-}
-catch {
-    Write-Error "An error occurred: $_"
-}
+# Scripti çalıştır
+& $scriptPath
 
 
 # 
