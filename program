@@ -4,7 +4,7 @@ function Show-Menu {
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "--- Main Menu                  --- Welcome to Software Install ---                                 CREATED BY MRLSx7 ---" -ForegroundColor Red
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[1]  *** Program Install ***                       [6]  Browser Install                                                 " -ForegroundColor Gray
+    Write-Host "[1]  ***-Program Install-***                       [6]  Browser Install                                                 " -ForegroundColor Gray
     Write-Host "[2]  Program Install                               [7]  VPN + Remote Install                                            " -ForegroundColor Gray
     Write-Host "[3]  Security Install                              [8]  Media Player Install                                            " -ForegroundColor Gray
     Write-Host "[4]  Developer Tools Install                       [9]  Chat Messenger Install                                          " -ForegroundColor Gray
@@ -16,7 +16,7 @@ function Show-Menu {
     Write-Host "[31] Setup Program Install ISO + EXE               [80] *** Winget Install  ***                                         " -ForegroundColor DarkMagenta
     Write-Host "[32] Setup Microsoft Office Install EXE            [81] *** Chocolat Install ***                                        " -ForegroundColor DarkMagenta
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[90] ** Standard PC Install All in One **                                                                               " -ForegroundColor DarkRed
+    Write-Host "[90] *** Standard PC Install All in One ***                                                                             " -ForegroundColor DarkRed
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "[98] Windows Utility (winutil)                                                                                          " -ForegroundColor DarkGray
     Write-Host "[99] Microsoft Activation Scripts (MAS)                                                                                 " -ForegroundColor DarkGray
