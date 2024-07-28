@@ -8,30 +8,30 @@ echo ---------------------------------------------------------------------------
 echo --- menu_02                             --- Other Program Installer ---                            CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
 REM Choose a program to install:
-echo [1]  TechPowerUp GPU-Z                                       
-echo [2]  Crystal Disk Info                                       
-echo [3]  Crystal Disk Mark                                      
-echo [4]  Core Temp                                                
-echo [5]  Lightshot                                                         
-echo [6]  Winget UI                                                
-echo [7]  Java 8                                                
-echo [8]  Free Download Manager                                                 
-echo [9]  qBittorrent                                                    
-echo [10] UniFi Network Application                                                  
-echo [11] Termius                                             
-echo [12] FileZilla Server                             
-echo [13] WinZip                                                   
-echo [14] Notion                                           
-echo [15] FL Studio                           
-echo [16] NDI 6 Tools                                              
-echo [17] NDI 6 Runtime                                 
-echo [18] Xtreme Download Manager
-echo [19] MSI Center
-echo [20] MSI Driver - App Center
-echo [21] CPUID CPU-Z MSI
-echo [22] MSI Afterburner
-echo [23] ASUS ArmouryCrate
-echo [24] CPUID ROG CPU-Z
+echo [1]  'winget' TechPowerUp GPU-Z                                       
+echo [2]  (winget) Crystal Disk Info                                       
+echo [3]  (winget) Crystal Disk Mark                                      
+echo [4]  (winget) Core Temp                                                
+echo [5]  (winget) Lightshot                                                         
+echo [6]  (winget) Winget UI                                                
+echo [7]  (winget) Java 8                                                
+echo [8]  (winget) Free Download Manager                                                 
+echo [9]  "choco"  qBittorrent                                                    
+echo [10] "choco"  UniFi Network Application                                                  
+echo [11] (winget) Termius                                             
+echo [12] "choco"  FileZilla Server                             
+echo [13] (winget) inZip                                                   
+echo [14] (winget) Notion                                           
+echo [15] (winget) FL Studio                           
+echo [16] (winget) NDI 6 Tools                                              
+echo [17] (winget) NDI 6 Runtime                                 
+echo [18] (winget) Xtreme Download Manager
+echo [19] {msstore} MSI Center 
+echo [20] {msstore} MSI Driver App Center 
+echo [21] (winget) CPUID CPU-Z MSI
+echo [22] (winget) MSI Afterburner
+echo [23] (winget) ASUS ArmouryCrate
+echo [24] (winget) CPUID ROG CPU-Z
 echo ------------------------------------------------------------------------------------------------------------------------
 echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
