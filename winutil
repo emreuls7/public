@@ -1,14 +1,3 @@
-# URL'den scripti indir
-$scriptUrl = "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
-$scriptContent = Invoke-WebRequest -Uri $scriptUrl -UseBasicP
-$scriptPath = "$env:TEMP\winutil.ps1"
-
-# Scripti geçici bir dosyaya kaydet
-$scriptContent.Content | Out-File -FilePath $scriptPath -Encoding UTF8
-
-# Scripti çalıştır
-& $scriptPath
-
-
-# 
-# 
+# URL'den scripti indirip içeriğini görüntüle
+$scriptContent = Invoke-RestMethod -Uri "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
+$scriptContent
