@@ -99,7 +99,7 @@ if "%choice%"=="32" goto menu32
 
 if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
 
-if "%choice%"=="81" goto 81
+if "%choice%"=="81" powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 if "%choice%"=="82" goto 82
 
@@ -121,63 +121,16 @@ if "%choice%"=="95" goto 95
 
 if "%choice%"=="98" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1 | iex'
 
-if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E | iex'
+if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E | iex'"
 
 if "%choice%"=="0" goto exit
 
 goto main_menu
 
 
-
-::winget upgrade
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --id --all productID --accept-package-agreements --accept-source-agreements --silent"
-
-::winget install
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id productID --accept-package-agreements --accept-source-agreements --silent"
-
-
-
-::---------------------------------------------------------------------------------------------------------------------------
-:80
-cls
-
-echo Microsoft Store Upgrade...
-
-
-echo Microsoft Desktop App Installer...
-
-
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id Microsoft.DesktopAppInstaller --accept-package-agreements --accept-source-agreements --silent"
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9nblggh4nns1 --accept-package-agreements --accept-source-agreements --silent"
-
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-AppxPackage -Register -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
-
-::powershell Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
-
-::powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install -e --id 9wzdncrfjbmp --accept-package-agreements --accept-source-agreements --silent"
-
-::start /wait "" "ms-windows-store://pdp?activetab=pivot%3Aoverviewtab&hl=en-us&gl=us&productid=9wzdncrfjbmp&referrer=storeforweb&mode=mini&pos=0%2C0%2C0%2C0"
-echo completed.
-pause
-goto main_menu
-
-
-::---------------------------------------------------------------------------------------------------------------------------
-:81
-
-echo Chocolat Installer...
-powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-echo completed.
-pause
-goto main_menu
-
-
 ::---------------------------------------------------------------------------------------------------------------------------
 :90
 cls
-
 echo Install List
 echo -------------
 echo Chocolat Install
@@ -399,30 +352,6 @@ goto main_menu
 :N
 goto main_menu
 
-::---------------------------------------------------------------------------------------------------------------------------
-:98
-cls
-
-echo Running Submenu...
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://christitus.com/win" | iex
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1" | iex
-pause
-goto main_menu
-
-::---------------------------------------------------------------------------------------------------------------------------
-:99
-cls
-
-echo Running Submenu...
-::powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://get.activated.win | iex"
-powershell -Command "$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::powershell -command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; irm https://massgrave.dev/get | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm https://get.activated.win | iex"
-::PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.activated.win'))"
-::powershell -command "irm https://get.activated.win | iex"
-pause
-goto main_menu
-
 
 ::---------------------------------------------------------------------------------------------------------------------------
 REM Exit
@@ -432,5 +361,5 @@ echo ---------------------------------------------------------------------------
 echo --- Exit                      --- Thank you for using Software Installer ---                       CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
 echo Exiting...
-timeout /t 3 /nobreak >nul
+timeout /t 2 /nobreak >nul
 exit
