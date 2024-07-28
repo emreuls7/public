@@ -16,7 +16,8 @@ function Show-Menu {
     Write-Host "[31] Setup Program Install ISO + EXE               [80] *** Winget Install  ***                                         " -ForegroundColor DarkMagenta
     Write-Host "[32] Setup Microsoft Office Install EXE            [81] *** Chocolat Install ***                                        " -ForegroundColor DarkMagenta
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[90] ** Standard PC Install All in One **                                                                               " -ForegroundColor DarkGray
+    Write-Host "[90] ** Standard PC Install All in One **                                                                               " -ForegroundColor DarkRed
+    Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "[98] Windows Utility (winutil)                                                                                          " -ForegroundColor DarkGray
     Write-Host "[99] Microsoft Activation Scripts (MAS)                                                                                 " -ForegroundColor DarkGray
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
