@@ -109,7 +109,7 @@ function Handle-Choice {
         }
         99 { 
             Write-Host "You chose Microsoft Activation Scripts (MAS)." 
-            
+        }
         0 { exit }
         default { Write-Host "Invalid choice, please try again." }
     }
