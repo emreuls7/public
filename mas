@@ -2,7 +2,7 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 # Define the URL and expected hash (for example purposes)
-$url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
+$url = "https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E.cmd"
 $expectedHash = "31F7FD1E" # Expected CRC32 hash (replace with actual hash if available)
 
 # Function to calculate CRC32 hash (you can use an appropriate hash function if necessary)
@@ -17,7 +17,7 @@ try {
     $response = Invoke-WebRequest -Uri $url -ErrorAction Stop
 
     # Write the content to a temporary file
-    $tempFile = "$env:TEMP\mas.cmd"
+    $tempFile = "$env:TEMP\MAS_AIO-CRC32_31F7FD1E.cmd"
     Set-Content -Path $tempFile -Value $response.Content -ErrorAction Stop
 
     # Verify file hash (ensure it matches the expected hash)
