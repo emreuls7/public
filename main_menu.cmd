@@ -43,11 +43,11 @@ if "%choice%"=="1" (
 
     :: Başka bir seçim yapmak isteyip istemediğini sor
     set /p repeat="Başka bir seçim yapmak ister misiniz? (E/H): "
-    if /i "%repeat%"=="E" goto menu
+    if /i "%repeat%"=="E" goto main_menu
 ) else (
     echo Geçersiz seçim. Lütfen geçerli bir seçim yapın.
     :: Kullanıcıya tekrar seçim yapma şansı ver
-    goto menu
+    goto main_menu
 )
 
 endlocal
