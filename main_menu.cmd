@@ -68,7 +68,7 @@ if "%choice%"=="12" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 
 ::if "%choice%"=="20" goto menu20
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="21" gpowershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu21 | iex'
+if "%choice%"=="21" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu21 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="22" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu22 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
