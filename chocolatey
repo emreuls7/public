@@ -1,1 +1,28 @@
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/emreuls7/public/other/chocolatey.ps1'))
+# Temporarily bypass the execution policy for this process
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
+# Define the URL to fetch the script from
+$url = "https://raw.githubusercontent.com/emreuls7/public/other/chocolatey.ps1"
+
+# Fetch the content from the URL
+try {
+    $response = Invoke-WebRequest -Uri $url -UseBasicP
+} catch {
+    Write-Error "Failed to fetch script from $url"
+    exit 1
+}
+
+# Write the content to a temporary file
+$tempFile = "$env:TEMP\chocolatey.ps1"
+Set-Content -Path $tempFile -Value $response.Content
+
+# Execute the script
+try {
+    Start-Process -FilePath "powershell.exe" -ArgumentList "-File `"$tempFile`"" -Wait -NoNewWindow
+} catch {
+    Write-Error "Failed to execute script from $tempFile"
+    exit 1
+}
+
+# Optionally, delete the file after execution
+Remove-Item -Path $tempFile -Force
