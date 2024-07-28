@@ -3,14 +3,11 @@ cls
 :menu_01
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
-color 20
 echo --- menu_01                          --- *** Program Installer *** ---                             CREATED BY MRLSx7 ---
-color 40
 echo ------------------------------------------------------------------------------------------------------------------------
-color 20
-echo "[1]  iTop Easy Desktop                         [11] OBS Studio + Teleport"
-echo "[2]  PuTTY                                     [12] ** WinRar + Key **"
-echo "[3]  WinSCP                                    [13] Any To ISO + Key"
+echo [1]  iTop Easy Desktop                         [11] OBS Studio + Teleport
+echo [2]  PuTTY                                     [12] ** WinRar + Key **
+echo [3]  WinSCP                                    [13] Any To ISO + Key
 echo [4]  FileZilla Client                          [14] Revo Uninstaller Pro + Key
 echo [5]  QuickLook                                 [15] AOMEI Partitio Assistant + Key
 echo [6]  Advanced IP Scanner                       [16] Internet Download Manager + Activation Script
@@ -19,15 +16,12 @@ echo [8]  Notepad++                                 [18] Cute PDF Writer
 echo [9]  DeepL                                     [19] File Converter
 echo [10] Rufus                                     [20] Mozilla Thunderbird
 echo ------------------------------------------------------------------------------------------------------------------------
-color 20
 echo [0] Exit
-color 40
+echo ------------------------------------------------------------------------------------------------------------------------
+set /p choice="Enter your choice (0,1,2,3...): "
 echo ------------------------------------------------------------------------------------------------------------------------
 color 20
-set /p choice="Enter your choice (0,1,2,3...): "
-color 20
 ::------------------------------------------------------------------------------------------------------------------------
-REM Process user's choice for
 if "%choice%"=="1" goto install_programA1
 if "%choice%"=="2" goto install_programA2
 if "%choice%"=="3" goto install_programA3
