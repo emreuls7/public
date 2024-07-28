@@ -1,0 +1,49 @@
+# Renkleri tanımlamak için örnekler
+
+# Siyah yazı rengi
+Write-Host "Bu siyah renkli bir metindir." -ForegroundColor Black
+
+# Koyu Mavi yazı rengi
+Write-Host "Bu koyu mavi renkli bir metindir." -ForegroundColor DarkBlue
+
+# Koyu Yeşil yazı rengi
+Write-Host "Bu koyu yeşil renkli bir metindir." -ForegroundColor DarkGreen
+
+# Koyu Cyan yazı rengi
+Write-Host "Bu koyu cyan renkli bir metindir." -ForegroundColor DarkCyan
+
+# Koyu Kırmızı yazı rengi
+Write-Host "Bu koyu kırmızı renkli bir metindir." -ForegroundColor DarkRed
+
+# Koyu Magenta yazı rengi
+Write-Host "Bu koyu magenta renkli bir metindir." -ForegroundColor DarkMagenta
+
+# Koyu Sarı yazı rengi
+Write-Host "Bu koyu sarı renkli bir metindir." -ForegroundColor DarkYellow
+
+# Gri yazı rengi
+Write-Host "Bu gri renkli bir metindir." -ForegroundColor Gray
+
+# Koyu Gri yazı rengi
+Write-Host "Bu koyu gri renkli bir metindir." -ForegroundColor DarkGray
+
+# Mavi yazı rengi
+Write-Host "Bu mavi renkli bir metindir." -ForegroundColor Blue
+
+# Yeşil yazı rengi
+Write-Host "Bu yeşil renkli bir metindir." -ForegroundColor Green
+
+# Cyan yazı rengi
+Write-Host "Bu cyan renkli bir metindir." -ForegroundColor Cyan
+
+# Kırmızı yazı rengi
+Write-Host "Bu kırmızı renkli bir metindir." -ForegroundColor Red
+
+# Magenta yazı rengi
+Write-Host "Bu magenta renkli bir metindir." -ForegroundColor Magenta
+
+# Sarı yazı rengi
+Write-Host "Bu sarı renkli bir metindir." -ForegroundColor Yellow
+
+# Beyaz yazı rengi
+Write-Host "Bu beyaz renkli bir metindir." -ForegroundColor White
