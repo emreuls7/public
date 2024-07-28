@@ -1,4 +1,4 @@
-# Function to display the menu
+# Menü görüntüleme fonksiyonu
 function Show-Menu {
     Clear-Host
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
@@ -13,74 +13,49 @@ function Show-Menu {
     Write-Host "[11] Microsoft Program Install                     [80] *** Winget Install  ***"
     Write-Host "[12] Microsoft .NET Install                        [81] *** Chocolat Install ***"
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
-    Write-Host "[21] * Windows Fixed *                             [90] ** Standart PC Install All in One **"
+    Write-Host "[21] * Windows Fixed *                             [90] ** Standard PC Install All in One **"
     Write-Host "[22] * Microsoft Fixed *"
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
-    Write-Host "[31] Setup Program Install ISO + EXE               [98] Windows Utility ( winutil )"
-    Write-Host "[32] Setup Microsoft Office Install EXE            [99] Microsoft Activation Scripts ( MAS )"
+    Write-Host "[31] Setup Program Install ISO + EXE               [98] Windows Utility (winutil)"
+    Write-Host "[32] Setup Microsoft Office Install EXE            [99] Microsoft Activation Scripts (MAS)"
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
     Write-Host "[0] Exit"
     Write-Host "------------------------------------------------------------------------------------------------------------------------"
 }
 
+# Script indirme ve çalıştırma fonksiyonu
+function Download-And-Execute-Script {
+    param (
+        [string]$Url
+    )
+    
+    $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
+    try {
+        Write-Host "Downloading script from $Url..."
+        Invoke-WebRequest -Uri $Url -OutFile $tempFile
+        Write-Host "Script downloaded to $tempFile"
+        
+        Write-Host "Executing script..."
+        Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
+    } catch {
+        Write-Host "An error occurred while processing the script: $_"
+    } finally {
+        if (Test-Path $tempFile) {
+            Remove-Item $tempFile -Force
+            Write-Host "Temporary file removed."
+        }
+    }
+}
+
+# Kullanıcı seçimlerini işleyen fonksiyon
 function Handle-Choice {
     param (
         [int]$Choice
     )
 
     switch ($Choice) {
-        1 { 
-            Write-Host "You chose Program Install."
-            # URL of the script to download and execute
-            $url = "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd"
-            # Define the path to save the downloaded script
-            $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
-            try {
-                # Download the script
-                Write-Host "Downloading script from $url..."
-                Invoke-WebRequest -Uri $url -OutFile $tempFile
-                Write-Host "Script downloaded to $tempFile"
-                
-                # Execute the downloaded script
-                Write-Host "Executing script..."
-                Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
-            } catch {
-                Write-Host "An error occurred: $_"
-            }
-            finally {
-                # Clean up the downloaded file
-                if (Test-Path $tempFile) {
-                    Remove-Item $tempFile -Force
-                    Write-Host "Temporary file removed."
-                }
-            }
-        }
-        2 { 
-            Write-Host "You chose Program Install."
-            # URL of the script to download and execute
-            $url = "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu02.cmd"
-            # Define the path to save the downloaded script
-            $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
-            try {
-                # Download the script
-                Write-Host "Downloading script from $url..."
-                Invoke-WebRequest -Uri $url -OutFile $tempFile
-                Write-Host "Script downloaded to $tempFile"
-                
-                # Execute the downloaded script
-                Write-Host "Executing script..."
-                Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
-            } catch {
-                Write-Host "An error occurred: $_"
-            }
-            finally {
-                # Clean up the downloaded file
-                if (Test-Path $tempFile) {
-                    Remove-Item $tempFile -Force
-                    Write-Host "Temporary file removed."
-                }
-            }
-        }
+        1 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd" }
+        2 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu02.cmd" }
         3 { Write-Host "You chose Security Install." }
         4 { Write-Host "You chose Developer Tools Install." }
         5 { Write-Host "You chose Driver Install." }
@@ -100,25 +75,29 @@ function Handle-Choice {
         90 { Write-Host "You chose Standard PC Install All in One." }
         98 { 
             Write-Host "You chose Windows Utility (winutil)."
-            # Betiğin içeriğini doğrudan indirip çalıştır
             $url = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winutil.ps1"
             $scriptContent = (Invoke-WebRequest -Uri $url).Content
             Invoke-Expression $scriptContent
         }
         99 { 
             Write-Host "You chose Microsoft Activation Scripts (MAS)."
-            ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://massgrave.dev/get | iex'
+            Start-Process powershell.exe -ArgumentList "irm https://massgrave.dev/get | iex" -Verb RunAs
         }
         0 { exit }
         default { Write-Host "Invalid choice, please try again." }
     }
 }
 
-# Main loop to display the menu and handle choices
+# Ana döngü menüyü görüntülemek ve seçimleri işlemek için
 do {
     Show-Menu
     $choice = Read-Host "Enter your choice"
-    Handle-Choice -Choice $choice
+    if ($choice -match '^\d+$') {
+        $choice = [int]$choice
+        Handle-Choice -Choice $choice
+    } else {
+        Write-Host "Invalid input. Please enter a number."
+    }
     if ($choice -ne 0) {
         Read-Host "Press Enter to return to the main menu"
     }
