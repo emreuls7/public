@@ -30,9 +30,15 @@ set /p choice="Enter your choice (0,1,2,3...): "
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="1" (
     echo Seçim 1 yapıldı, PowerShell komutunu çalıştırıyorum...
+    
+    :: PowerShell komutunu çalıştır ve betiği al
     powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
-        $scriptContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/emreuls7/public/program_url/menu01'
-        Write-Output $scriptContent
+        $scriptUrl = 'https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd'
+        $scriptContent = Invoke-RestMethod -Uri $scriptUrl
+        $scriptPath = [System.IO.Path]::GetTempFileName() + '.cmd'
+        $scriptContent | Out-File -FilePath $scriptPath -Encoding ASCII
+        Write-Output 'Yüklenen betik dosyası: ' + $scriptPath
+        Start-Process cmd.exe -ArgumentList '/c ' + $scriptPath -NoNewWindow -Wait
     }"
 ) else (
     echo Geçersiz seçim veya çıkış yapılıyor...
