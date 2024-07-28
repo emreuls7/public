@@ -15,6 +15,10 @@ try {
     # İçeriği geçici dosyaya yaz
     Set-Content -Path $tempFile -Value $content -ErrorAction Stop
 
+    # Dosyanın içeriğini kontrol et
+    Write-Output "Dosya içeriği:"
+    Get-Content -Path $tempFile
+
     # Dosyayı çalıştır
     Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
 
