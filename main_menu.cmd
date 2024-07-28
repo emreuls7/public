@@ -3,22 +3,22 @@ cls
 :main_menu
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
-echo --- Main Menu                  --- Welcome to Software Installer ---                               CREATED BY MRLSx7 ---
+echo --- Main Menu                  --- Welcome to Software Install ---                                 CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [1]  *** Program Installer ***                       [6]  Browser Installer
-echo [2]  Program Installer                               [7]  VPN + Remote Installer
-echo [3]  Security Installer                              [8]  Media Player Installer
-echo [4]  Developer Tools Installer                       [9]  Chat Messenger Installer
-echo [5]  Driver Installer                                [10] Games Launcher Installer
+echo [1]  *** Program Install ***                       [6]  Browser Install
+echo [2]  Program Install                               [7]  VPN + Remote Install
+echo [3]  Security Install                              [8]  Media Player Install
+echo [4]  Developer Tools Install                       [9]  Chat Messenger Install
+echo [5]  Driver Install                                [10] Games Launcher Install
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [11] Microsoft Program Installer                     [80] *** MS Store Upgrade All  ***
-echo [12] Microsoft .NET Installer                        [81] *** Chocolat Installing ***
+echo [11] Microsoft Program Install                     [80] *** Winget Install  ***
+echo [12] Microsoft .NET Install                        [81] *** Chocolat Install ***
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [21] * Windows Fixed *                               [90] ** Standart PC Installer All in One **
+echo [21] * Windows Fixed *                             [90] ** Standart PC Install All in One **
 echo [22] * Microsoft Fixed *
 echo ------------------------------------------------------------------------------------------------------------------------
-echo [31] Setup Program Installer ISO + EXE               [98] Windows Utility ( winutil )
-echo [32] Setup Microsoft Office Installer EXE            [99] Microsoft Activation Scripts ( MAS )
+echo [31] Setup Program Install ISO + EXE               [98] Windows Utility ( winutil )
+echo [32] Setup Microsoft Office Install EXE            [99] Microsoft Activation Scripts ( MAS )
 echo ------------------------------------------------------------------------------------------------------------------------
 echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
