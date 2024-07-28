@@ -1,16 +1,135 @@
-0 – Siyah
-1 – Mavi
-2 – Yeşil
-3 – Aqua
-4 – Kırmızı
-5 – Mor
-6 – Altın Sarısı
-7 – Beyaz
-8 – Gri
-9 – Açık Mavi
-A – Açık Yeşil
-B – Açık Aqua
-C – Açık Kırmızı
-D – Açık Mor
-E – Açık Sarı
-F – Parlak Beyaz
+color 00  Rem Siyah arka plan, Siyah metin
+color 01  Rem Mavi arka plan, Siyah metin
+color 02  Rem Yeşil arka plan, Siyah metin
+color 03  Rem Aqua arka plan, Siyah metin
+color 04  Rem Kırmızı arka plan, Siyah metin
+color 05  Rem Mor arka plan, Siyah metin
+color 06  Rem Altın Sarısı arka plan, Siyah metin
+color 07  Rem Beyaz arka plan, Siyah metin
+color 08  Rem Gri arka plan, Siyah metin
+color 09  Rem Açık Mavi arka plan, Siyah metin
+color 0A  Rem Açık Yeşil arka plan, Siyah metin
+color 0B  Rem Açık Aqua arka plan, Siyah metin
+color 0C  Rem Açık Kırmızı arka plan, Siyah metin
+color 0D  Rem Açık Mor arka plan, Siyah metin
+color 0E  Rem Açık Sarı arka plan, Siyah metin
+color 0F  Rem Parlak Beyaz arka plan, Siyah metin
+
+color 10  Rem Siyah arka plan, Mavi metin
+color 11  Rem Mavi arka plan, Mavi metin
+color 12  Rem Yeşil arka plan, Mavi metin
+color 13  Rem Aqua arka plan, Mavi metin
+color 14  Rem Kırmızı arka plan, Mavi metin
+color 15  Rem Mor arka plan, Mavi metin
+color 16  Rem Altın Sarısı arka plan, Mavi metin
+color 17  Rem Beyaz arka plan, Mavi metin
+color 18  Rem Gri arka plan, Mavi metin
+color 19  Rem Açık Mavi arka plan, Mavi metin
+color 1A  Rem Açık Yeşil arka plan, Mavi metin
+color 1B  Rem Açık Aqua arka plan, Mavi metin
+color 1C  Rem Açık Kırmızı arka plan, Mavi metin
+color 1D  Rem Açık Mor arka plan, Mavi metin
+color 1E  Rem Açık Sarı arka plan, Mavi metin
+color 1F  Rem Parlak Beyaz arka plan, Mavi metin
+
+color 20  Rem Siyah arka plan, Yeşil metin
+color 21  Rem Mavi arka plan, Yeşil metin
+color 22  Rem Yeşil arka plan, Yeşil metin
+color 23  Rem Aqua arka plan, Yeşil metin
+color 24  Rem Kırmızı arka plan, Yeşil metin
+color 25  Rem Mor arka plan, Yeşil metin
+color 26  Rem Altın Sarısı arka plan, Yeşil metin
+color 27  Rem Beyaz arka plan, Yeşil metin
+color 28  Rem Gri arka plan, Yeşil metin
+color 29  Rem Açık Mavi arka plan, Yeşil metin
+color 2A  Rem Açık Yeşil arka plan, Yeşil metin
+color 2B  Rem Açık Aqua arka plan, Yeşil metin
+color 2C  Rem Açık Kırmızı arka plan, Yeşil metin
+color 2D  Rem Açık Mor arka plan, Yeşil metin
+color 2E  Rem Açık Sarı arka plan, Yeşil metin
+color 2F  Rem Parlak Beyaz arka plan, Yeşil metin
+
+color 30  Rem Siyah arka plan, Aqua metin
+color 31  Rem Mavi arka plan, Aqua metin
+color 32  Rem Yeşil arka plan, Aqua metin
+color 33  Rem Aqua arka plan, Aqua metin
+color 34  Rem Kırmızı arka plan, Aqua metin
+color 35  Rem Mor arka plan, Aqua metin
+color 36  Rem Altın Sarısı arka plan, Aqua metin
+color 37  Rem Beyaz arka plan, Aqua metin
+color 38  Rem Gri arka plan, Aqua metin
+color 39  Rem Açık Mavi arka plan, Aqua metin
+color 3A  Rem Açık Yeşil arka plan, Aqua metin
+color 3B  Rem Açık Aqua arka plan, Aqua metin
+color 3C  Rem Açık Kırmızı arka plan, Aqua metin
+color 3D  Rem Açık Mor arka plan, Aqua metin
+color 3E  Rem Açık Sarı arka plan, Aqua metin
+color 3F  Rem Parlak Beyaz arka plan, Aqua metin
+
+color 40  Rem Siyah arka plan, Kırmızı metin
+color 41  Rem Mavi arka plan, Kırmızı metin
+color 42  Rem Yeşil arka plan, Kırmızı metin
+color 43  Rem Aqua arka plan, Kırmızı metin
+color 44  Rem Kırmızı arka plan, Kırmızı metin
+color 45  Rem Mor arka plan, Kırmızı metin
+color 46  Rem Altın Sarısı arka plan, Kırmızı metin
+color 47  Rem Beyaz arka plan, Kırmızı metin
+color 48  Rem Gri arka plan, Kırmızı metin
+color 49  Rem Açık Mavi arka plan, Kırmızı metin
+color 4A  Rem Açık Yeşil arka plan, Kırmızı metin
+color 4B  Rem Açık Aqua arka plan, Kırmızı metin
+color 4C  Rem Açık Kırmızı arka plan, Kırmızı metin
+color 4D  Rem Açık Mor arka plan, Kırmızı metin
+color 4E  Rem Açık Sarı arka plan, Kırmızı metin
+color 4F  Rem Parlak Beyaz arka plan, Kırmızı metin
+
+color 50  Rem Siyah arka plan, Mor metin
+color 51  Rem Mavi arka plan, Mor metin
+color 52  Rem Yeşil arka plan, Mor metin
+color 53  Rem Aqua arka plan, Mor metin
+color 54  Rem Kırmızı arka plan, Mor metin
+color 55  Rem Mor arka plan, Mor metin
+color 56  Rem Altın Sarısı arka plan, Mor metin
+color 57  Rem Beyaz arka plan, Mor metin
+color 58  Rem Gri arka plan, Mor metin
+color 59  Rem Açık Mavi arka plan, Mor metin
+color 5A  Rem Açık Yeşil arka plan, Mor metin
+color 5B  Rem Açık Aqua arka plan, Mor metin
+color 5C  Rem Açık Kırmızı arka plan, Mor metin
+color 5D  Rem Açık Mor arka plan, Mor metin
+color 5E  Rem Açık Sarı arka plan, Mor metin
+color 5F  Rem Parlak Beyaz arka plan, Mor metin
+
+color 60  Rem Siyah arka plan, Altın Sarısı metin
+color 61  Rem Mavi arka plan, Altın Sarısı metin
+color 62  Rem Yeşil arka plan, Altın Sarısı metin
+color 63  Rem Aqua arka plan, Altın Sarısı metin
+color 64  Rem Kırmızı arka plan, Altın Sarısı metin
+color 65  Rem Mor arka plan, Altın Sarısı metin
+color 66  Rem Altın Sarısı arka plan, Altın Sarısı metin
+color 67  Rem Beyaz arka plan, Altın Sarısı metin
+color 68  Rem Gri arka plan, Altın Sarısı metin
+color 69  Rem Açık Mavi arka plan, Altın Sarısı metin
+color 6A  Rem Açık Yeşil arka plan, Altın Sarısı metin
+color 6B  Rem Açık Aqua arka plan, Altın Sarısı metin
+color 6C  Rem Açık Kırmızı arka plan, Altın Sarısı metin
+color 6D  Rem Açık Mor arka plan, Altın Sarısı metin
+color 6E  Rem Açık Sarı arka plan, Altın Sarısı metin
+color 6F  Rem Parlak Beyaz arka plan, Altın Sarısı metin
+
+color 70  Rem Siyah arka plan, Beyaz metin
+color 71  Rem Mavi arka plan, Beyaz metin
+color 72  Rem Yeşil arka plan, Beyaz metin
+color 73  Rem Aqua arka plan, Beyaz metin
+color 74  Rem Kırmızı arka plan, Beyaz metin
+color 75  Rem Mor arka plan, Beyaz metin
+color 76  Rem Altın Sarısı arka plan, Beyaz metin
+color 77  Rem Beyaz arka plan, Beyaz metin
+color 78  Rem Gri arka plan, Beyaz metin
+color 79  Rem Açık Mavi arka plan, Beyaz metin
+color 7A  Rem Açık Yeşil arka plan, Beyaz metin
+color 7B  Rem Açık Aqua arka plan, Beyaz metin
+color 7C  Rem Açık Kırmızı arka plan, Beyaz metin
+color 7D  Rem Açık Mor arka plan, Beyaz metin
+color 7E  Rem Açık Sarı arka plan, Beyaz metin
+color 7F  Rem Parlak Beyaz arka plan, Beyaz metin
