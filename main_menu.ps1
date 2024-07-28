@@ -57,7 +57,32 @@ function Handle-Choice {
                 }
             }
         }
-        2 { Write-Host "You chose Program Install." }
+        2 { 
+            Write-Host "You chose Program Install."
+            # URL of the script to download and execute
+            $url = "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu02.cmd"
+            # Define the path to save the downloaded script
+            $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
+            try {
+                # Download the script
+                Write-Host "Downloading script from $url..."
+                Invoke-WebRequest -Uri $url -OutFile $tempFile
+                Write-Host "Script downloaded to $tempFile"
+                
+                # Execute the downloaded script
+                Write-Host "Executing script..."
+                Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
+            } catch {
+                Write-Host "An error occurred: $_"
+            }
+            finally {
+                # Clean up the downloaded file
+                if (Test-Path $tempFile) {
+                    Remove-Item $tempFile -Force
+                    Write-Host "Temporary file removed."
+                }
+            }
+        }
         3 { Write-Host "You chose Security Install." }
         4 { Write-Host "You chose Developer Tools Install." }
         5 { Write-Host "You chose Driver Install." }
