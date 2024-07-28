@@ -1,19 +1,26 @@
 # TLS 1.2 güvenlik protokolünü ayarla
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-# URL'den dosya içeriğini al
+# URL ve geçici dosya yolu tanımla
 $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
-$content = Invoke-WebRequest -Uri $url -UseBasicP -ErrorAction Stop
-
-# İçeriği geçici bir dosyaya yaz
 $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
-$content.Content | Out-File -FilePath $tempFile -Encoding ASCII
 
-# Geçici dosyayı çalıştır
-Start-Process -FilePath $tempFile -Wait
+try {
+    # URL'den dosya içeriğini indir
+    Invoke-WebRequest -Uri $url -OutFile $tempFile -UseBasicP -ErrorAction Stop
 
-# Geçici dosyayı sil
-Remove-Item -Path $tempFile
+    # Dosyayı çalıştır
+    Start-Process -FilePath $tempFile -Wait
+
+} catch {
+    # Hata durumunda mesajı yazdır
+    Write-Error "Bir hata oluştu: $_"
+} finally {
+    # Geçici dosyayı sil
+    if (Test-Path $tempFile) {
+        Remove-Item -Path $tempFile -ErrorAction SilentlyContinue
+    }
+}
 
 
 
