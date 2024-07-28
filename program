@@ -13,10 +13,10 @@ function Show-Menu {
     Write-Host "[11] Microsoft Program Install                     [21] * Windows Fixed *                                               " -ForegroundColor White                    
     Write-Host "[12] Microsoft .NET Install                        [22] * Microsoft Fixed *                                             " -ForegroundColor White
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[31] Setup Program Install ISO + EXE               [80] *** Winget Install  ***                                         " -ForegroundColor DarkMagenta
-    Write-Host "[32] Setup Microsoft Office Install EXE            [81] *** Chocolat Install ***                                        " -ForegroundColor DarkMagenta
+    Write-Host "[31] Setup Program Install ISO + EXE               [41] *** Winget Install  ***                                         " -ForegroundColor DarkMagenta
+    Write-Host "[32] Setup Microsoft Office Install EXE            [42] *** Chocolatey Install ***                                      " -ForegroundColor DarkMagenta
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[90] *** Standard PC Install All in One ***                                                                             " -ForegroundColor DarkRed
+    Write-Host "[90] *** Standard PC Install All in One ***        [91] Winget + Chocolatey Upgrade                                     " -ForegroundColor DarkRed
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "[98] Windows Utility (winutil)                                                                                          " -ForegroundColor DarkGray
     Write-Host "[99] Microsoft Activation Scripts (MAS)                                                                                 " -ForegroundColor DarkGray
@@ -72,9 +72,13 @@ function Handle-Choice {
         22 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu22.cmd" }
         31 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu31.cmd" }
         32 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu32.cmd" }
-        80 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/winget" }
-        81 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/chocolatey" }
+        41 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/winget" }
+        42 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/chocolatey" }
+
         90 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu90.cmd" }
+
+        91 { winget upgrade --all; choco upgrade chocolatey; choco upgrade all }
+
         98 { 
             Write-Host "You chose Windows Utility (winutil)." -ForegroundColor Cyan
             $url = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winutil.ps1"
