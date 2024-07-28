@@ -116,7 +116,7 @@ if "%choice%"=="95" goto 95
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="98" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/MAS_AIO-CRC32_31F7FD1E | iex'"
+if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/mas | iex'"
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="0" goto exit
 ::---------------------------------------------------------------------------------------------------------------------------
