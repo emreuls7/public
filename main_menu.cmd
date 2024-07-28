@@ -28,7 +28,15 @@ color 9
 ::---------------------------------------------------------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="1" powershell -Command "& { $scriptContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/emreuls7/public/program_url/menu01'; $scriptContent }"
+if "%choice%"=="1" (
+    echo Seçim 1 yapıldı, PowerShell komutunu çalıştırıyorum...
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
+        $scriptContent = Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/emreuls7/public/program_url/menu01'
+        Write-Output $scriptContent
+    }"
+) else (
+    echo Geçersiz seçim veya çıkış yapılıyor...
+)
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
