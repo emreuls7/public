@@ -21,88 +21,32 @@ echo ---------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
 echo ------------------------------------------------------------------------------------------------------------------------
 color 70
-::------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="1" goto install_programA1
-if "%choice%"=="2" goto install_programA2
-if "%choice%"=="3" goto install_programA3
-if "%choice%"=="4" goto install_programA4
-if "%choice%"=="5" goto install_programA5
-if "%choice%"=="6" goto install_programA6
-if "%choice%"=="7" goto install_programA7
-if "%choice%"=="8" goto install_programA8
-if "%choice%"=="9" goto install_programA9
-if "%choice%"=="10" goto install_programA10
+::---------------------------------------------------------------------------------------------------------------------------
+if "%choice%"=="1" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
+if "%choice%"=="2" winget install PuTTY.PuTTY -e
+if "%choice%"=="3" choco install winscp -y
+if "%choice%"=="4" choco install filezilla -y
+if "%choice%"=="5" winget install QL-Win.QuickLook -e
+if "%choice%"=="6" winget install Famatech.AdvancedIPScanner -e
+if "%choice%"=="7" choco install advanced-port-scanner -y
+if "%choice%"=="8" winget install Notepad++.Notepad++ -e
+if "%choice%"=="9" winget install DeepL.DeepL -e
+if "%choice%"=="10" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent"
 if "%choice%"=="11" goto install_obs
-if "%choice%"=="12" goto install_programA12
-if "%choice%"=="13" goto install_programA13
-if "%choice%"=="14" goto install_programA14
-if "%choice%"=="15" goto install_programA15
-if "%choice%"=="16" goto install_programA16
-if "%choice%"=="17" goto install_programA17
-if "%choice%"=="18" goto install_programA18
-if "%choice%"=="19" goto install_programA19
-if "%choice%"=="20" goto install_programA20
-::------------------------------------------------------------------------------------------------------------------------
+if "%choice%"=="12" goto winrar
+if "%choice%"=="13" goto anytoiso
+if "%choice%"=="14" goto revounis
+if "%choice%"=="15" goto aomeipart
+if "%choice%"=="16" goto idm
+if "%choice%"=="17" winget install Adobe.Acrobat.Reader.64-bit -e
+if "%choice%"=="18" winget install AcroSoftwareInc.CutePDFWriter -e
+if "%choice%"=="19" winget install AdrienAllard.FileConverter -e
+if "%choice%"=="20" winget install Mozilla.Thunderbird -e
+::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="0" exit
-::------------------------------------------------------------------------------------------------------------------------
+::---------------------------------------------------------------------------------------------------------------------------
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA1
-cls
-::iTop Easy Desktop XPFCJVZV10X2WV Unknown msstore
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id XPFCJVZV10X2WV --accept-package-agreements --accept-source-agreements --silent"
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA2
-cls
-winget install PuTTY.PuTTY -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA3
-cls
-choco install winscp -y
-::winget install WinSCP.WinSCP -e
-::winget install WinSCP.WinSCP.RC -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA4
-cls
-choco install filezilla -y
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA5
-cls
-winget install QL-Win.QuickLook -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA6
-cls
-winget install Famatech.AdvancedIPScanner -e
-::choco install advanced-ip-scanner -y
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA7
-cls
-choco install advanced-port-scanner -y
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA8
-cls
-winget install Notepad++.Notepad++ -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA9
-cls
-winget install DeepL.DeepL -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA10
-cls
-::Rufus 9PC3H3V7Q9CH Unknown msstore
-powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9PC3H3V7Q9CH --accept-package-agreements --accept-source-agreements --silent"
-::winget install Rufus.Rufus -e
-::choco install rufus -y
-goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
 :install_obs
 cls
@@ -122,7 +66,7 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA12
+:winrar
 cls
 winget install RARLab.WinRAR -e
 echo ----------------------
@@ -139,7 +83,7 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA13
+:anytoiso
 cls
 choco install anytoiso -y
 ::winget install CrystalIDEASoftware.AnyToISO -e
@@ -158,7 +102,7 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA14
+:revounis
 cls
 winget install RevoUninstaller.RevoUninstallerPro -e
 echo ----------------------
@@ -175,7 +119,7 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA15
+:aomeipart
 cls
 ::choco install partition-assistant-standard -y
 winget install AOMEI.PartitionAssistant -e
@@ -193,7 +137,7 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA16
+:idm
 cls
 winget install Tonec.InternetDownloadManager -e
 echo ----------------------
@@ -211,25 +155,4 @@ goto menu_01
 :N
 goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA17
-cls
-winget install Adobe.Acrobat.Reader.64-bit -e
-goto menu_01
 ::---------------------------------------------------------------------------------------------------------------------------
-:install_programA18
-cls
-winget install AcroSoftwareInc.CutePDFWriter -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA19
-cls
-winget install AdrienAllard.FileConverter -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-:install_programA20
-cls
-winget install Mozilla.Thunderbird -e
-goto menu_01
-::---------------------------------------------------------------------------------------------------------------------------
-
-
