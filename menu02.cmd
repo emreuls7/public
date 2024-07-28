@@ -1,9 +1,9 @@
 @echo off
 cls
-:menu2
+:menu_02
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
-echo --- Menu2                             --- Other Program Installer ---                              CREATED BY MRLSx7 ---
+echo --- menu_02                             --- Other Program Installer ---                              CREATED BY MRLSx7 ---
 echo ------------------------------------------------------------------------------------------------------------------------
 REM Choose a program to install:
 echo [1]  TechPowerUp GPU-Z                                      [21] Termius
@@ -79,7 +79,7 @@ if "%choice%"=="40" goto install_programB40
 
 if "%choice%"=="0" exit
 
-goto menu2
+goto menu_02
 
 ::------------------------------------------------------------------------------------------------------------------------
 :install_programB1
@@ -88,7 +88,7 @@ cls
 winget install TechPowerUp.GPU-Z -e
 
 pause
-goto menu2
+goto menu_02
 
 
 ::------------------------------------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ cls
 winget install CrystalDewWorld.CrystalDiskInfo -e
 
 pause
-goto menu2
+goto menu_02
 
 :install_programB3
 cls
@@ -110,7 +110,7 @@ cls
 winget install CrystalDewWorld.CrystalDiskMark -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -122,7 +122,7 @@ cls
 winget install ALCPU.CoreTemp -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -134,7 +134,7 @@ cls
  
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -146,7 +146,7 @@ cls
 winget install Skillbrains.Lightshot -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -158,7 +158,7 @@ cls
 winget install SomePythonThings.WingetUIStore -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -170,7 +170,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -182,7 +182,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -194,7 +194,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -206,7 +206,7 @@ cls
 winget install Oracle.JavaRuntimeEnvironment -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -218,7 +218,7 @@ cls
 winget install SoftDeluxe.FreeDownloadManager -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -230,7 +230,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -243,7 +243,7 @@ choco install qbittorrent -y
 ::winget install qBittorrent.qBittorrent -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -256,7 +256,7 @@ choco install ubiquiti-unifi-controller -y
 ::winget install UbiquitiInc.UnifiNetworkApplication -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -268,7 +268,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -280,7 +280,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -292,7 +292,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -304,7 +304,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -316,7 +316,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -329,7 +329,7 @@ winget install Termius.Termius -e
 ::choco install termius -y
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -341,7 +341,7 @@ cls
 choco install filezilla.server -y
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -353,7 +353,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -366,7 +366,7 @@ cls
 winget install Corel.WinZip -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -378,7 +378,7 @@ cls
 winget install Notion.Notion -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -390,7 +390,7 @@ cls
 winget install ImageLine.FLStudio -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -403,7 +403,7 @@ cls
 winget install NDI.NDITools -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -415,7 +415,7 @@ cls
 winget install NDI.NDIRuntime -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -426,7 +426,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -438,7 +438,7 @@ cls
 winget install subhra74.XtremeDownloadManager -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -451,7 +451,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -464,7 +464,7 @@ cls
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9NVMNJCR03XV --accept-package-agreements --accept-source-agreements --silent"
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -477,7 +477,7 @@ cls
 powershell -NoProfile -ExecutionPolicy Bypass -Command "winget install --id 9P9WDH947752 --accept-package-agreements --accept-source-agreements --silent"
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -490,7 +490,7 @@ cls
 winget install CPUID.CPU-Z.MSI -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -503,7 +503,7 @@ cls
 winget install Guru3D.Afterburner -e
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -516,7 +516,7 @@ cls
 winget install Asus.ArmouryCrate
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -529,7 +529,7 @@ cls
 winget install CPUID.CPU-Z.ROG
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -543,7 +543,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -557,7 +557,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
@@ -571,7 +571,7 @@ cls
 
 
 pause
-goto menu2
+goto menu_02
 
 
 
