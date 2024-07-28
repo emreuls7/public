@@ -1,16 +1,16 @@
-# TLS 1.2 Protokolü Ayarı
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-# URL'yi tanımla
 $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
-
-# İçeriği al ve bir dosyaya kaydet
 $outputPath = "mas.cmd"
 
-Write-Output "İçeriği URL'den alıyor ve $outputPath olarak kaydediyor..."
-Invoke-WebRequest -Uri $url -OutFile $outputPath -ErrorAction Stop
+try {
+    Write-Output "İçeriği URL'den alıyor ve $outputPath olarak kaydediyor..."
+    Invoke-WebRequest -Uri $url -OutFile $outputPath -ErrorAction Stop
+    Write-Output "İçerik başarıyla kaydedildi. Dosya yolu: $outputPath"
+} catch {
+    Write-Output "Bir hata oluştu: $_"
+}
 
-Write-Output "İçerik başarıyla kaydedildi. Dosya yolu: $outputPath"
 
 
 # https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd
