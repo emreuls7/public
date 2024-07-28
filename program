@@ -71,8 +71,8 @@ function Handle-Choice {
         22 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu22.cmd" }
         31 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu31.cmd" }
         32 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu32.cmd" }
-        80 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu80.cmd" }
-        81 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu81.cmd" }
+        80 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/winget" }
+        81 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/other/chocolatey" }
         90 { Download-And-Execute-Script -Url "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu90.cmd" }
         98 { 
             Write-Host "You chose Windows Utility (winutil)." -ForegroundColor Cyan
