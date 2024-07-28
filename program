@@ -13,8 +13,8 @@ function Show-Menu {
     Write-Host "[11] Microsoft Program Install                     [21] * Windows Fixed *                                               " -ForegroundColor White                    
     Write-Host "[12] Microsoft .NET Install                        [22] * Microsoft Fixed *                                             " -ForegroundColor White
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[31] Setup Program Install ISO + EXE               [41] *** Winget Install  ***                                         " -ForegroundColor DarkMagenta
-    Write-Host "[32] Setup Microsoft Office Install EXE            [42] *** Chocolatey Install ***                                      " -ForegroundColor DarkMagenta
+    Write-Host "[31] Setup Program Install ISO + EXE               [41] *** Winget Install  ***                                         " -ForegroundColor Blue
+    Write-Host "[32] Setup Microsoft Office Install EXE            [42] *** Chocolatey Install ***                                      " -ForegroundColor Blue
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "[90] *** Standard PC Install All in One ***        [91] Winget + Chocolatey Upgrade                                     " -ForegroundColor DarkRed
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
