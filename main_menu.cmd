@@ -86,15 +86,15 @@ if "%choice%"=="22" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 
 ::if "%choice%"=="29" goto menu29
 
-::if "%choice%"=="30" goto menu30
+::if "%choice%"=="30" goto menu30 
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="31" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu31 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="32" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu32 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList "winget upgrade --all --accept-package-agreements --accept-source-agreements --silent"
+if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winget.ps1 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="81" powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+if "%choice%"=="81" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/chocolatey.ps1 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="82" goto 82
 
