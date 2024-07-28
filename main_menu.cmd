@@ -28,7 +28,7 @@ color 9
 ::---------------------------------------------------------------------------------------------------------------------------
 set /p choice="Enter your choice (0,1,2,3...): "
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="1" Invoke-RestMethod -Uri "https://raw.githubusercontent.com/emreuls7/public/program_cmd/menu01.cmd"
+if "%choice%"=="1" powershell.exe -ExecutionPolicy Bypass -Command "Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/emreuls7/public/program/menu01'"
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="2" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu02 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
