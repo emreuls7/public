@@ -4,20 +4,20 @@ function Show-Menu {
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "--- Main Menu                  --- Welcome to Software Install ---                                 CREATED BY MRLSx7 ---" -ForegroundColor Green
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[1]  *** Program Install ***                       [6]  Browser Install" -ForegroundColor Blue
-    Write-Host "[2]  Program Install                               [7]  VPN + Remote Install" -ForegroundColor Blue
-    Write-Host "[3]  Security Install                              [8]  Media Player Install" -ForegroundColor Blue
-    Write-Host "[4]  Developer Tools Install                       [9]  Chat Messenger Install" -ForegroundColor Blue
-    Write-Host "[5]  Driver Install                                [10] Games Launcher Install" -ForegroundColor Blue
+    Write-Host "[1]  *** Program Install ***                       [6]  Browser Install                                                 " -ForegroundColor Blue
+    Write-Host "[2]  Program Install                               [7]  VPN + Remote Install                                            " -ForegroundColor Blue
+    Write-Host "[3]  Security Install                              [8]  Media Player Install                                            " -ForegroundColor Blue
+    Write-Host "[4]  Developer Tools Install                       [9]  Chat Messenger Install                                          " -ForegroundColor Blue
+    Write-Host "[5]  Driver Install                                [10] Games Launcher Install                                          " -ForegroundColor Blue
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[11] Microsoft Program Install                     [80] *** Winget Install  ***" -ForegroundColor Blue
-    Write-Host "[12] Microsoft .NET Install                        [81] *** Chocolat Install ***" -ForegroundColor Blue
+    Write-Host "[11] Microsoft Program Install                     [80] *** Winget Install  ***                                         " -ForegroundColor Blue
+    Write-Host "[12] Microsoft .NET Install                        [81] *** Chocolat Install ***                                        " -ForegroundColor Blue
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[21] * Windows Fixed *                             [90] ** Standard PC Install All in One **" -ForegroundColor Blue
-    Write-Host "[22] * Microsoft Fixed *" -ForegroundColor Blue
+    Write-Host "[21] * Windows Fixed *                             [90] ** Standard PC Install All in One **                            " -ForegroundColor Blue
+    Write-Host "[22] * Microsoft Fixed *                                                                                                " -ForegroundColor Blue
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
-    Write-Host "[31] Setup Program Install ISO + EXE               [98] Windows Utility (winutil)" -ForegroundColor Blue
-    Write-Host "[32] Setup Microsoft Office Install EXE            [99] Microsoft Activation Scripts (MAS)" -ForegroundColor Blue
+    Write-Host "[31] Setup Program Install ISO + EXE               [98] Windows Utility (winutil)                                       " -ForegroundColor Blue
+    Write-Host "[32] Setup Microsoft Office Install EXE            [99] Microsoft Activation Scripts (MAS)                              " -ForegroundColor Blue
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
     Write-Host "[0] Exit" -ForegroundColor Red
     Write-Host "------------------------------------------------------------------------------------------------------------------------" -ForegroundColor Green
