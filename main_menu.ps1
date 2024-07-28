@@ -100,8 +100,39 @@ function Handle-Choice {
         80 { Write-Host "You chose Winget Install." }
         81 { Write-Host "You chose Chocolat Install." }
         90 { Write-Host "You chose Standard PC Install All in One." }
-        98 { Write-Host "You chose Windows Utility (winutil)." }
-        99 { Write-Host "You chose Microsoft Activation Scripts (MAS)." }
+        98 { 
+            Write-Host "You chose Windows Utility (winutil)."
+            # Betiğin içeriğini doğrudan indirip çalıştır
+            $url = "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
+            $scriptContent = (Invoke-WebRequest -Uri $url).Content
+            Invoke-Expression $scriptContent
+        }
+        99 { 
+            Write-Host "You chose Microsoft Activation Scripts (MAS)." 
+            # URL of the script to download and execute
+            $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
+            # Define the path to save the downloaded script
+            $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
+            try {
+                # Download the script
+                Write-Host "Downloading script from $url..."
+                Invoke-WebRequest -Uri $url -OutFile $tempFile
+                Write-Host "Script downloaded to $tempFile"
+                
+                # Execute the downloaded script
+                Write-Host "Executing script..."
+                Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempFile`"" -Wait -NoNewWindow
+            } catch {
+                Write-Host "An error occurred: $_"
+            }
+            finally {
+                # Clean up the downloaded file
+                if (Test-Path $tempFile) {
+                    Remove-Item $tempFile -Force
+                    Write-Host "Temporary file removed."
+                }
+            }
+        }
         0 { exit }
         default { Write-Host "Invalid choice, please try again." }
     }
