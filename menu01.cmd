@@ -19,12 +19,9 @@ echo ---------------------------------------------------------------------------
 echo [0] Exit
 echo ------------------------------------------------------------------------------------------------------------------------
 echo.
-
-
-
-set /p choice="Enter your choice (0,1,2,3...): "
 color 9
 
+set /p choice="Enter your choice (0,1,2,3...): "
 
 REM Process user's choice for
 if "%choice%"=="1" goto install_programA1
