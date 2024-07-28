@@ -103,7 +103,7 @@ function Handle-Choice {
         98 { 
             Write-Host "You chose Windows Utility (winutil)."
             # Betiğin içeriğini doğrudan indirip çalıştır
-            $url = "https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1"
+            $url = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winutil.ps1"
             $scriptContent = (Invoke-WebRequest -Uri $url).Content
             Invoke-Expression $scriptContent
         }
@@ -114,7 +114,7 @@ function Handle-Choice {
             [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
             # URL of the script to download and execute
-            $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
+            $url = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/0884271c4fcdc72d95bce7c5c7bdf77ef4a9bcef/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd"
 
             # Define the path to save the downloaded script
             $tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
