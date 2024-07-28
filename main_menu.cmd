@@ -92,7 +92,7 @@ if "%choice%"=="31" powershell -ExecutionPolicy Bypass -Command "Start-Process p
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="32" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/program_url/menu32 | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winget.ps1 | iex'
+if "%choice%"=="80" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winget | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="81" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/chocolatey | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ if "%choice%"=="94" goto 94
 
 if "%choice%"=="95" goto 95
 ::---------------------------------------------------------------------------------------------------------------------------
-if "%choice%"=="98" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winutil.ps1 | iex'
+if "%choice%"=="98" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/winutil | iex'
 ::---------------------------------------------------------------------------------------------------------------------------
 if "%choice%"=="99" powershell -ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList 'irm https://raw.githubusercontent.com/emreuls7/public/other/mas | iex'"
 ::---------------------------------------------------------------------------------------------------------------------------
