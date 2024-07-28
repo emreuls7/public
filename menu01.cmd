@@ -24,7 +24,7 @@ echo.
 
 
 set /p choice="Enter your choice (0,1,2,3...): "
-color 1
+color 9
 
 
 REM Process user's choice for
