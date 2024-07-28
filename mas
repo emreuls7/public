@@ -3,10 +3,17 @@
 
 # URL'den dosya içeriğini al
 $url = "https://raw.githubusercontent.com/emreuls7/public/other/mas.cmd"
-$content = Invoke-WebRequest -Uri $url
+$content = Invoke-WebRequest -Uri $url -UseBasicP -ErrorAction Stop
 
-# İçeriği çalıştır
-Invoke-Expression $content.Content
+# İçeriği geçici bir dosyaya yaz
+$tempFile = [System.IO.Path]::GetTempFileName() + ".cmd"
+$content.Content | Out-File -FilePath $tempFile -Encoding ASCII
+
+# Geçici dosyayı çalıştır
+Start-Process -FilePath $tempFile -Wait
+
+# Geçici dosyayı sil
+Remove-Item -Path $tempFile
 
 
 
