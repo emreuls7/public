@@ -1,8 +1,6 @@
 @echo off
-color 02
 cls
 :menu_02
-color 02
 cls
 echo ------------------------------------------------------------------------------------------------------------------------
 echo --- menu_02                             --- Other Program Installer ---                            CREATED BY MRLSx7 ---
