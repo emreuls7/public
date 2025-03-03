@@ -1,0 +1,44 @@
+# Set the security protocol to TLS 1.2
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# URL to fetch the script from
+$url = "https://raw.githubusercontent.com/emreuls7/public/other/winget.ps1"
+
+# Define a function to handle errors and clean up
+function Handle-Error {
+    param (
+        [string]$message
+    )
+    Write-Error $message
+    if (Test-Path $tempFile) {
+        Remove-Item -Path $tempFile -ErrorAction SilentlyContinue
+    }
+    exit 1
+}
+
+# Main script execution
+try {
+    # Fetch the content from the URL
+    $response = Invoke-WebRequest -Uri $url -ErrorAction Stop
+
+    # Validate the response content
+    if (-not $response.Content) {
+        Handle-Error "Failed to retrieve content from $url."
+    }
+
+    # Write the content to a temporary file
+    $tempFile = [System.IO.Path]::Combine($env:TEMP, "winget.ps1")
+    Set-Content -Path $tempFile -Value $response.Content -ErrorAction Stop
+
+    # Execute the file
+    Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
+
+    # Optionally, delete the file after execution
+    Remove-Item -Path $tempFile -ErrorAction Stop
+}
+catch {
+    Handle-Error "An error occurred: $_"
+}
+
+# Pause to allow the user to review any output or error messages
+Read-Host -Prompt "Press Enter to exit..."

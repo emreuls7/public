@@ -1,0 +1,37 @@
+# Set the security protocol to TLS 1.2
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Define the URL and expected hash (for example purposes)
+$url = "https://raw.githubusercontent.com/massgravel/Microsoft-Activation-Scripts/0884271c4fcdc72d95bce7c5c7bdf77ef4a9bcef/MAS/All-In-One-Version/MAS_AIO-CRC32_31F7FD1E.cmd"
+$expectedHash = "31F7FD1E" # Expected CRC32 hash (replace with actual hash if available)
+
+# Function to calculate CRC32 hash (you can use an appropriate hash function if necessary)
+function Get-FileCRC32 {
+    param([string]$filePath)
+    # Dummy implementation - Replace with actual CRC32 calculation
+    return "DummyCRC32Hash"
+}
+
+try {
+    # Fetch the content from the URL
+    $response = Invoke-WebRequest -Uri $url -ErrorAction Stop
+
+    # Write the content to a temporary file
+    $tempFile = "$env:TEMP\MAS_AIO-CRC32_31F7FD1E.cmd"
+    Set-Content -Path $tempFile -Value $response.Content -ErrorAction Stop
+
+    # Verify file hash (ensure it matches the expected hash)
+    $actualHash = Get-FileCRC32 -filePath $tempFile
+    if ($actualHash -ne $expectedHash) {
+        throw "File hash does not match expected hash. Potential file tampering detected."
+    }
+
+    # Execute the file
+    Start-Process -FilePath $tempFile -Wait -NoNewWindow -ErrorAction Stop
+
+    # Optionally, delete the file after execution
+    Remove-Item -Path $tempFile -ErrorAction Stop
+}
+catch {
+    Write-Error "An error occurred: $_"
+}
