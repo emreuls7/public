@@ -160,7 +160,7 @@ http://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8
 http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/xhfcTC7/powertv.png",POWER TV
-http://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8
+https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/6401NQw/kraltv.png",KRAL POP
 https://dogus-live.daioncdn.net/kralpoptv/kralpoptv.m3u8
